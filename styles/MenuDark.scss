@@ -1,0 +1,180 @@
+.menu-header-dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+  
+    /* Иконка меню-бургера */
+    .menu-icon-dark {
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 20px;
+      height: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; /* Плавный переход для анимации */
+  
+      .line-dark {
+        width: 100%;
+        height: 1px;
+        background-color: #5d5855;
+        transition: all 0.3s ease-in-out; /* Плавный переход */
+      }
+
+      .line-dark:nth-child(2) {
+        width: 70%; 
+        align-self: center; 
+      }
+  
+      /* Трансформация в крестик при открытии */
+      &.open .line-dark:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+  
+      &.open .line-dark:nth-child(2) {
+        opacity: 0; /* Скрываем среднюю линию */
+      }
+  
+      &.open .line-dark:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  
+    .logo-dark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;
+    }
+  
+    .language-switcher-dark {
+          display: flex;
+          align-items: center;
+        
+          a {
+            margin: 0 5px;
+            font-size: 12px;
+            letter-spacing: 0.19em;
+            cursor: pointer;
+            line-height: 22.2px;
+            transition: color 0.3s ease; 
+            text-decoration: none;
+          }
+        
+          .active {
+            color: #5d5855 !important; 
+          }
+      
+          .inactive {
+            color: #8c8781 !important; 
+          }
+        
+          span {
+            color: #5d5855;
+            font-size: 14px;
+          }
+         }
+  }
+  
+  /* Меню */
+  .menu-dark {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Убираем фон */
+    color: #8c8781;
+    max-height: 0; /* Высота по умолчанию */
+    overflow: hidden; /* Скрываем содержимое меню, пока оно закрыто */
+    opacity: 0; /* Скрываем меню */
+    // transition: all 0.5s ease-in-out; /* Плавный переход для показа меню */
+  
+    ul {
+      list-style: none;
+      align-items: left;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      top: 100%;
+  
+      li {
+        margin: 0 15px;
+  
+        a {
+          color: #8c8781;
+          text-decoration: none;
+          font-size: 10px;
+          letter-spacing: 0.24em;
+          font-weight: 400;
+          line-height: 15.46px;
+        }
+      }
+    }
+  }
+
+  .menu-dark ul li a {
+    transition: color 0.3s ease-in-out, filter 0.3s ease-in-out; /* Плавный переход для цвета и фильтра */
+  }
+
+  .menu-dark ul li a:hover {
+    color: #666; /* Меняем цвет текста на более тёмный (или любой другой, подходящий под дизайн) */
+    filter: brightness(0.8); /* Дополнительно уменьшаем яркость для затемнения */
+  }
+  
+  /* Показ меню при открытии */
+  .menu-dark.open {
+    max-height: 100vh; /* Устанавливаем высоту при открытии */
+    opacity: 1; /* Делаем меню видимым */
+  }
+
+  /* Стили для шторки */
+.menu-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/EducationBG2.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%); /* Начальное состояние, шторка скрыта */
+  transition: transform 0.5s ease; /* Плавное появление */
+  z-index: 999;
+  opacity: 0;
+
+  &.open {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible; // Делаем элемент видимым и кликабельным при открытии
+  }
+
+  &.closing {
+    opacity: 0;
+    transform: translateX(-100%);
+    visibility: visible; // Поддерживаем видимость во время анимации
+  }
+}
+
+
+/* Стили для ссылок в меню */
+.menu-dark ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-dark li {
+  margin: 20px 0;
+}
+
+.menu-dark a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}

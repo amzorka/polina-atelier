@@ -1,0 +1,19 @@
+.slider-section {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    
+    .slick-slide {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+  
+    .slick-slide img {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
