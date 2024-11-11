@@ -4,10 +4,13 @@
     overflow: hidden;
     position: relative;
     
+    
     .slick-slide {
       height: 100vh;
       width: 100vw;
       position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   
     .slick-slide img {
@@ -15,5 +18,6 @@
       width: 100%;
       background-size: cover;
       background-position: center;
+      
     }
   }
