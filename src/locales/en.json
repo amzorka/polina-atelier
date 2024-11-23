@@ -1,0 +1,161 @@
+{
+  "ecology": {
+    "content": "OUR COMMITMENT TO ECOLOGY DRIVES US TO PRIORITIZE SUSTAINABLE PRACTICES, FROM SOURCING NATURAL MATERIALS TO MINIMIZING OUR ENVIRONMENTAL IMPACT.",
+    "footer": "SEEDLINGS | 120+"
+  },
+  "about": {
+    "content": "POLINA ATELIER CREATES EXCEPTIONAL FURNITURE PIECES USING NATURAL AND HIGH-QUALITY MATERIALS. WE ARE COMMITTED TO SUSTAINABILITY AND ATTENTIVE TO EVERY CUSTOMER'S NEEDS. OUR HERITAGE IS A STORY OF CRAFTSMANSHIP AND PASSION, REFLECTED IN EVERY PIECE WE PRODUCE.",
+    "footer": {
+      "tg": "TG | POLINA_ATELIER",
+      "email": "INFO@POLINA-ATELIER.COM"
+    }
+  },
+  "education": {
+    "pupils": "PUPILS | 30+",
+    "text1": "THROUGH CONTINUOUS LEARNING AND TRAINING, WE EMPOWER OUR TEAM TO INNOVATE AND EXCEL IN THEIR CRAFTSMANSHIP, ENSURING LASTING QUALITY. WRITE TO US FOR MORE DETAILS.",
+    "email": "INFO@POLINA-ATELIER.COM"
+  },
+  "lens": {
+    "photos": "PHOTOS | 500+"
+  },
+
+  "production": {
+    "people": "PEOPLE | 70+",
+    "footer": "PRODUCTIONS | 3000M2+"
+  },
+    "gallery": {
+      "footer": "PROJECTS | 1000+",
+      "projects": [
+        {
+          "title": "CHESS TABLE",
+          "description": "THIS CHESS SET WAS INSPIRED BY THE ABSTRACT SCULPTURES OF CONSTANTIN BRÂNCUȘI"
+        },
+        {
+          "title": "SCARLET DESK",
+          "description": "THE COMBINATION OF GLOSSY DEEP RED AND DELICATE TEXTILE TEXTURE IN TONE CREATES A SPECIAL CONTRAST EFFECT"
+        },
+        {
+          "title": "WHITE MIRROR",
+          "description": ""
+        },
+        {
+          "title": "GREEN TABLE",
+          "description": "THE BALANCED COLOR INSIDE THE DRAWERS COMPLEMENTS THE BODY, CREATING A SENSE OF THOUGHTFUL DESIGN"
+        },
+        {
+          "title": "SNOW POUF",
+          "description": "STAINED OAK VENEER, PATINA BRASS STRIP AND WARM WHITE TEXTILES CREATE THE FEELING OF A THING WITH HISTORY"
+        },
+        {
+          "title": "CRIMSON NIGHTSTAND",
+          "description": "FILLED WITH VELVET STRIP TEXTURES, BRASS TRIM AND UNIQUE HAND-CRAFTED RELIEF"
+        },
+        {
+          "title": "EBONY CONSOLE",
+          "description": ""
+        },
+        {
+          "title": "BRONZE CHEST",
+          "description": "A COMBINATION OF NATURAL AMERICAN WALNUT AND DEEP BURGUNDY IN GLOSS, EMPHASIZED BY TEXTILE INSERTS"
+        },
+        {
+          "title": "SNOW SHELF",
+          "description": ""
+        },
+        {
+          "title": "MIDNIGHT SINK",
+          "description": "THE SHADE OF THE STAINED EUCALYPTUS WAS CAREFULLY SELECTED, THE ALUMINUM ENDS EMPHASIZE THE DEPTH OF THE VENEER"
+        },
+        {
+          "title": "IVORY CUBE",
+          "description": "A PERFECTLY CALIBRATED TABLE MADE OF ARTIFICIAL STONE, WITH INVISIBLE JOINTS OF THE MATERIAL"
+        },
+        {
+          "title": "SEA BREEZE",
+          "description": ""
+        },
+        {
+          "title": "MILK WARDROBE",
+          "description": "NATURAL SELENITE OF A DELICATE PEACH SHADE IN A BRASS FRAME"
+        },
+        {
+          "title": "GLASS WARDROBE",
+          "description": "THE PLAY OF LIGHT AND DICHROIC GLASS CREATES THE EFFECT OF RAINBOW GRADIENT LIGHTING"
+        }
+      ]
+    },
+  
+
+
+  
+
+
+
+
+
+
+
+  
+      "menuHome": {
+        "contacts": "CONTACTS",
+        "mission": "MISSION",
+        "gallery": "GALLERY",
+        "production": "PRODUCTION",
+        "lens": "LENS",
+        "ecology": "ECOLOGY",
+        "education": "EDUCATION"
+      },
+
+      "menu": {
+        "home": "HOME",
+        "mission": "MISSION",
+        "gallery": "GALLERY",
+        "production": "PRODUCTION",
+        "lens": "LENS",
+        "ecology": "ECOLOGY",
+        "education": "EDUCATION"
+      },
+
+      "menuDark": {
+        "home": "HOME",
+        "mission": "MISSION",
+        "gallery": "GALLERY",
+        "production": "PRODUCTION",
+        "lens": "LENS",
+        "ecology": "ECOLOGY",
+        "education": "EDUCATION"
+      },
+
+      "productionScroll": {
+          "name1": "SERGEY",
+          "age1": "51 Y. O",
+          "post1": "CARPENTER",
+          "name2": "ELVIRA",
+          "age2": "28 Y. O",
+          "post2": "PAINTER",
+          "slogan2": "“NOTHING IS IMPOSSIBLE, THE WORD ITSELF SAYS, I'M POSSIBLE!”",
+          "name3": "CYRIL",
+          "age3": "25 Y. O",
+          "post3": "CARPENTER'S ASSISTANT",
+          "name4": "ALEXANDER",
+          "age4": "61 Y. O",
+          "post4": "CARPENTER`S ASSISTANT",
+          "slogan4": "“LIFE IS A PROGRESS, AND NOT A STATION”",
+          "name5": "NIKOLAY",
+          "age5": "40 Y. O",
+          "post5": "CARPENTER",
+          "slogan5": "“SIMPLICITY IS THE ULTIMATE SOPHISTICATION”",
+          "name6": "DANIELLA",
+          "age6": "20 Y. O",
+          "post6": "PAINTER'S ASSISTANT",
+          "name7": "DMITRIY",
+          "age7": "38 Y. O",
+          "post7": "PAINTER",
+          "name8": "IGOR",
+          "age8": "38 Y. O",
+          "post8": "CUTTING MASTER"
+        }
+      
+    
+  
+}

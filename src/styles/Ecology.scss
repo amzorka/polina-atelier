@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Kudryashev Headline Sans';  
+  src: url('../fonts/kudryashevheadline-sans.woff2') format('woff2'),
+       url('../fonts/kudryashevheadline-sans.woff') format('woff');
+  font-weight: 400;  
+  font-style: normal; 
+}
+
+.ecology {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/images/EcologyBG.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white; 
+    font-family: 'Kudryashev Headline Sans', sans;
+  }
+    
+  .ecology-content {
+    width: 468px;  
+    height: 75px; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-family: 'Kudryashev Headline Sans', sans;
+    padding: 0 20px;
+    line-height: 18.5px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+
+    p {
+      font-weight: 400;
+      line-height: 22.2px;
+      letter-spacing: 0.19em;
+      text-align: justify;
+      font-family: 'Kudryashev Headline Sans', sans;
+    }
+  }
+  
+  .ecology-footer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 33.3px;
+    letter-spacing: 0.19em;
+    padding-bottom: 20px;
+    font-family: 'Kudryashev Headline Sans', sans;
+  }
+
+  @media (max-width: 767px) {
+
+    .ecology-content {
+      width: 289px;  
+      overflow: visible;
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 14.8px;
+      letter-spacing: 0.19em;
+    }
+
+    .ecology-footer { 
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 21.24px;
+      letter-spacing: 0.23em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+
+    .ecology-content {
+      width: 468px;  
+      overflow: visible;
+      font-family: Kudryashev Headline Sans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22.2px;
+      letter-spacing: 0.19em;
+      text-align: justified;
+    }
+
+    .ecology-footer { 
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 33.3px;
+      letter-spacing: 0.19em;
+    }
+  }
+

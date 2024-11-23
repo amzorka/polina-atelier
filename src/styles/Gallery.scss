@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Kudryashev Headline Sans';  
+  src: url('../fonts/kudryashevheadline-sans.woff2') format('woff2'),
+       url('../fonts/kudryashevheadline-sans.woff') format('woff');
+  font-weight: 400;  
+  font-style: normal; 
+}
+
+
+.gallery-header {
+    font-family: 'Kudryashev Headline Sans', sans;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  
+  
+  .gallery-container {
+    background-image: url('/images/AboutBG.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+    padding: 80px 20px; 
+  }
+  
+  .gallery-item {
+    font-family: 'Kudryashev Headline Sans', sans;
+    width: 262px; 
+    height: 533px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img{
+        transform: scale(1.05); 
+      }
+  }
+  
+  
+  .gallery-footer {
+    font-family: 'Kudryashev Headline Sans', sans;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 33.3px;
+    letter-spacing: 0.19em;
+    z-index: 100;
+  }
+  
+  .gallery-footer p {
+    margin: 0;
+    color: #767676;
+  }
+
+  @media (max-width: 767px) {
+
+    .gallery-item {
+      object-fit: contain; 
+      height: 313px;
+      width: 173px;
+    }
+
+    .gallery-footer {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 21.24px;
+      letter-spacing: 0.23em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .gallery-item {
+      height: 641px;
+      width: 246px;
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    .gallery-item {
+      height: 408px;
+      width: 242px;
+    }
+  }

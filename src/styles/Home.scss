@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Kudryashev Headline Sans';  
+  src: url('../fonts/kudryashevheadline-sans.woff2') format('woff2'),
+       url('../fonts/kudryashevheadline-sans.woff') format('woff');
+  font-weight: 400;  
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: relative; 
+  font-family: 'Kudryashev Headline Sans', sans;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .home-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .center-text {
+      h1 {
+        font-size: 48px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .center-text img {
+    
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .home-slider {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-main {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+

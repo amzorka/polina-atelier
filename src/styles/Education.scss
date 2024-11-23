@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Kudryashev Headline Sans';  
+  src: url('/fonts/kudryashevheadline-sans.woff2') format('woff2'),
+       url('/fonts/kudryashevheadline-sans.woff') format('woff');
+  font-weight: 400;  
+  font-style: normal; 
+}
+
+.education {
+    width: 100vw;
+    height: 100%;
+    font-family: 'Kudryashev Headline Sans', sans;
+    color: white;
+  }
+  
+ 
+  .first-section {
+    background-image: url('/images/EducationBG1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+  .second-section {
+    background-image: url('/images/EducationBG2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black; 
+    padding: 20px;
+  }
+  
+  .education-content {
+    font-family: 'Kudryashev Headline Sans', sans;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 33.3px;
+    letter-spacing: 0.19em;
+    padding: 0 20px;
+  }
+  
+  .education-text {
+
+    .justified {
+    font-family: 'Kudryashev Headline Sans', sans;
+    width: 468px;
+    height: 75px;
+    margin: auto;
+    text-align: justify;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 20px;
+    line-height: 18.5px;
+    letter-spacing: 0.2em;
+    color: #8c8781;
+    margin-bottom: 1em;
+    }
+
+    .centroid {
+      font-family: 'Kudryashev Headline Sans', sans;
+      width: 468px;
+      height: 75px;
+      margin: auto;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 400;
+      padding-top: 50px;
+      line-height: 18.5px;
+      letter-spacing: 0.2em;
+      color: #8c8781;
+
+      a {
+        text-decoration: none;
+        color: #8c8781;
+      }
+
+      }
+  }
+  
+  .education-footer {
+    font-family: 'Kudryashev Headline Sans', sans;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18.5px;
+    letter-spacing: 0.2em;
+    color: #8c8781;
+  }
+
+  @media (max-width: 767px) {
+    .first-section {
+      background-image: url('/images/EducationBG1M.png'); 
+    }
+    .education-content {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 21.24px;
+      letter-spacing: 0.23em;
+    }
+
+    .justified {
+      width: 289px !important;
+      font-size: 8px !important;
+      font-weight: 400 !important;
+      line-height: 14.8px !important;
+      letter-spacing: 0.19em !important;
+    }
+
+    .centroid {
+      width: 289px !important;
+    }
+
+    .centroid a {
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 14.8px;
+      letter-spacing: 0.19em;
+    }
+
+    .education-footer img {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .first-section {
+      background-image: url('/images/EducationBG1T.png'); 
+    }
+    .education-content {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 33.3px;
+      letter-spacing: 0.19em;
+    }
+
+    .justified {
+      width: 506px !important;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      line-height: 22.2px !important;
+      letter-spacing: 0.19em !important;
+    }
+
+    .centroid {
+      width: 506px !important;
+    }
+
+    .centroid a {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22.2px;
+      letter-spacing: 0.19em;
+    }
+
+    .education-footer img {
+      display: none;
+    }
+  }
