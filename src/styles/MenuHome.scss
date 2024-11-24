@@ -160,19 +160,19 @@
     }
 
     .menu-icon-home {
-      transform: translateX(-20%); 
+      transform: translateX(-20%) !important; 
     }
   }
 
   @media (min-width: 768px) and (max-width: 1279px) {
     .menu-icon-home {
-      transform: translateX(-50%);
+      transform: translateX(-50%) !important;
     }
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
     .menu-icon-home {
-      transform: translateX(-60%);
+      transform: translateX(-60%) !important;
     }
   }
 
