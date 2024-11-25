@@ -21,7 +21,7 @@
   }
 
   .image-scroll img {
-    width: 100%;
+    width: 262px;
     height: auto;
     object-fit: cover; /* Единое поведение для всех изображений */
   }
@@ -95,6 +95,10 @@
       height: 262px;
       gap: 5px;
     }
+    
+    .image-scroll img {
+      width: 173px;
+    }
 
     .hover-container {
       height: 262px;
@@ -112,7 +116,11 @@
   @media (min-width: 768px) and (max-width: 1279px) {
     .image-scroll {
       height: 369px;
-      gap: 10px;
+      gap: 20px;
+    }
+
+    .image-scroll img {
+      width: 246px;
     }
 
     .hover-container {
@@ -134,10 +142,16 @@
       gap: 15px;
     }
 
+    .image-scroll img {
+      width: 244px;
+    }
+
+
     .hover-container {
       height: 369px;
       width: 244px;
     }
+
 
     .hover-text {
       font-size: 10px;

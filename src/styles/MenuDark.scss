@@ -185,9 +185,32 @@
   .language-switcher-dark a {
     font-size: 8px !important;
   }
-
   .menu-icon-dark {
     transform: translateY(60%) !important;
+  }
+  .logo-dark {
+    scale: 0.6 !important;
+    width: 132px !important;
+    height: 14px !important;
+    transform: translateX(-140%) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    
+  .logo-dark {
+    scale: 0.6 !important;
+    width: 198px !important;
+    height: 20px !important;
+    transform: translateX(-140%) !important;
+  }
+  .menu-icon-dark {
+    transform: translateY(110%) !important;
+    left: 40px !important;
+  }
+  .language-switcher-dark {
+    transform: translateY(70%) !important;
+    right: 40px !important;
   }
 }
 

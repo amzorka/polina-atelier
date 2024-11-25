@@ -184,10 +184,37 @@
     .language-switcher a {
       font-size: 8px !important;
       font-family: 'Kudryashev Headline Sans', sans;
-    }  
+    } 
+    
+    .logo {
+      scale: 0.6 !important;
+      width: 132px !important;
+      height: 14px !important;
+      transform: translateX(-140%) !important;
+    }
 
     .menu-icon {
       transform: translateY(60%) !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    
+    .logo {
+      scale: 0.6 !important;
+      width: 198px !important;
+      height: 20px !important;
+      transform: translateX(-140%) !important;
+    }
+
+    .menu-icon {
+      transform: translateY(110%) !important;
+      left: 40px !important;
+    }
+
+    .language-switcher {
+      transform: translateY(70%) !important;
+      right: 40px !important;
     }
   }
 

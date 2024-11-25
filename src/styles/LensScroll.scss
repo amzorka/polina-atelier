@@ -12,6 +12,11 @@
     scroll-behavior: smooth; 
   }
 
+  .image-scroll-lens img {
+    height: 395px;
+    width: 262px;
+  }
+
 
 .image-scroll-lens {
     -ms-overflow-style: none;  
@@ -20,5 +25,42 @@
   
   .image-scroll-lens::-webkit-scrollbar {
     display: none;  
+  }
+
+  @media (max-width: 767px)   {
+
+    .image-scroll-lens {
+      height: 261px;
+    }
+
+    .image-scroll-lens img {
+      height: 261px;
+      width: 173px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px)  {
+
+    .image-scroll-lens {
+      height: 369px;
+    }
+
+    .image-scroll-lens img {
+      height: 369px;
+      width: 246px;
+    }
+  }
+
+
+  @media (min-width: 1280px) and (max-width: 1919px)  {
+
+    .image-scroll-lens {
+      height: 369px;
+    }
+
+    .image-scroll-lens img {
+      height: 369px;
+      width: 243px;
+    }
   }
   

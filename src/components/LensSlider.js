@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import '../styles/LensSlider.scss';
 
-import slide1 from '../images/LensSlider/1.png';
-import slide2 from '../images/LensSlider/2.png';
-import slide3 from '../images/LensSlider/3.png';
-import slide4 from '../images/LensSlider/4.png';
-import slide5 from '../images/LensSlider/5.png';
-import slide6 from '../images/LensSlider/6.png';
-import slide7 from '../images/LensSlider/7.png';
-import slide8 from '../images/LensSlider/8.png';
+import slide1 from '../images/LensSlider/1.jpg';
+import slide2 from '../images/LensSlider/2.jpg';
+import slide3 from '../images/LensSlider/3.jpg';
+import slide4 from '../images/LensSlider/4.jpg';
+import slide5 from '../images/LensSlider/5.jpg';
+import slide6 from '../images/LensSlider/6.jpg';
+import slide7 from '../images/LensSlider/7.jpg';
+import slide8 from '../images/LensSlider/8.jpg';
 
 import mSlide1 from '../images/MobileLensSlider/1.png';
 import mSlide2 from '../images/MobileLensSlider/2.png';
@@ -20,23 +20,23 @@ import mSlide6 from '../images/MobileLensSlider/6.png';
 import mSlide7 from '../images/MobileLensSlider/7.png';
 import mSlide8 from '../images/MobileLensSlider/8.png';
 
-import tSlide1 from '../images/TabletLensSlider/1.png';
-import tSlide2 from '../images/TabletLensSlider/2.png';
-import tSlide3 from '../images/TabletLensSlider/3.png';
-import tSlide4 from '../images/TabletLensSlider/4.png';
-import tSlide5 from '../images/TabletLensSlider/5.png';
-import tSlide6 from '../images/TabletLensSlider/6.png';
-import tSlide7 from '../images/TabletLensSlider/7.png';
-import tSlide8 from '../images/TabletLensSlider/8.png';
+import tSlide1 from '../images/TabletLensSlider/1.jpg';
+import tSlide2 from '../images/TabletLensSlider/2.jpg';
+import tSlide3 from '../images/TabletLensSlider/3.jpg';
+import tSlide4 from '../images/TabletLensSlider/4.jpg';
+import tSlide5 from '../images/TabletLensSlider/5.jpg';
+import tSlide6 from '../images/TabletLensSlider/6.jpg';
+import tSlide7 from '../images/TabletLensSlider/7.jpg';
+import tSlide8 from '../images/TabletLensSlider/8.jpg';
 
-import lSlide1 from '../images/LaptopLensSlider/1.png';
-import lSlide2 from '../images/LaptopLensSlider/2.png';
-import lSlide3 from '../images/LaptopLensSlider/3.png';
-import lSlide4 from '../images/LaptopLensSlider/4.png';
-import lSlide5 from '../images/LaptopLensSlider/5.png';
-import lSlide6 from '../images/LaptopLensSlider/6.png';
-import lSlide7 from '../images/LaptopLensSlider/7.png';
-import lSlide8 from '../images/LaptopLensSlider/8.png';
+import lSlide1 from '../images/LaptopLensSlider/1.jpg';
+import lSlide2 from '../images/LaptopLensSlider/2.jpg';
+import lSlide3 from '../images/LaptopLensSlider/3.jpg';
+import lSlide4 from '../images/LaptopLensSlider/4.jpg';
+import lSlide5 from '../images/LaptopLensSlider/5.jpg';
+import lSlide6 from '../images/LaptopLensSlider/6.jpg';
+import lSlide7 from '../images/LaptopLensSlider/7.jpg';
+import lSlide8 from '../images/LaptopLensSlider/8.jpg';
 
 function LensSlider() {
   const [currentSlides, setCurrentSlides] = useState([]);

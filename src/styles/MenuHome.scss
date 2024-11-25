@@ -65,6 +65,7 @@
     .language-switcher {
       display: flex;
       align-items: center;
+      transform: translateY(0%);
     
       a {
         margin: 0 5px;
@@ -168,6 +169,7 @@
     .menu-icon-home {
       transform: translateX(-50%) !important;
     }
+
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {

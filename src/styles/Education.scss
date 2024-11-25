@@ -15,7 +15,7 @@
   
  
   .first-section {
-    background-image: url('/images/EducationBG1.png'); 
+    background-image: url('/images/EducationBG1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,5 +164,11 @@
 
     .education-footer img {
       display: none;
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    .first-section {
+      background-image: url('/images/EducationBG1L.jpg'); 
     }
   }

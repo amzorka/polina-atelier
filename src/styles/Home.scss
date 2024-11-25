@@ -40,13 +40,9 @@ html, body {
     align-items: center;
     height: 100%;
 
-    .center-text {
-      h1 {
-        font-size: 48px;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
+    .center-text img {
+      height: 30px;
+      width: 296px;
     }
   }
 }
@@ -55,8 +51,8 @@ html, body {
 
   .center-text img {
     
-    width: 100%;
-    margin: 0 auto;
+    height: 26px !important;
+    width: 172px !important;
   }
 
   .home-slider {
@@ -68,6 +64,13 @@ html, body {
   .home-main {
     padding: 0 20px;
     text-align: center;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .center-text img {
+    width: 228px !important;
+    height: 34px !important;
   }
 }
 

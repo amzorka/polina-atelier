@@ -64,26 +64,26 @@ import tScroll18 from '../images/TabletLensScroll/18.png';
 import tScroll19 from '../images/TabletLensScroll/19.png';
 import tScroll20 from '../images/TabletLensScroll/20.png';
 
-import lScroll1 from '../images/LaptopLensScroll/1.png';
-import lScroll2 from '../images/LaptopLensScroll/2.png';
-import lScroll3 from '../images/LaptopLensScroll/3.png';
-import lScroll4 from '../images/LaptopLensScroll/4.png';
-import lScroll5 from '../images/LaptopLensScroll/5.png';
-import lScroll6 from '../images/LaptopLensScroll/6.png';
-import lScroll7 from '../images/LaptopLensScroll/7.png';
-import lScroll8 from '../images/LaptopLensScroll/8.png';
-import lScroll9 from '../images/LaptopLensScroll/9.png';
-import lScroll10 from '../images/LaptopLensScroll/10.png';
-import lScroll11 from '../images/LaptopLensScroll/11.png';
-import lScroll12 from '../images/LaptopLensScroll/12.png';
-import lScroll13 from '../images/LaptopLensScroll/13.png';
-import lScroll14 from '../images/LaptopLensScroll/14.png';
-import lScroll15 from '../images/LaptopLensScroll/15.png';
-import lScroll16 from '../images/LaptopLensScroll/16.png';
-import lScroll17 from '../images/LaptopLensScroll/17.png';
-import lScroll18 from '../images/LaptopLensScroll/18.png';
-import lScroll19 from '../images/LaptopLensScroll/19.png';
-import lScroll20 from '../images/LaptopLensScroll/20.png';
+import lScroll1 from '../images/LaptopLensScroll/1.jpg';
+import lScroll2 from '../images/LaptopLensScroll/2.jpg';
+import lScroll3 from '../images/LaptopLensScroll/3.jpg';
+import lScroll4 from '../images/LaptopLensScroll/4.jpg';
+import lScroll5 from '../images/LaptopLensScroll/5.jpg';
+import lScroll6 from '../images/LaptopLensScroll/6.jpg';
+import lScroll7 from '../images/LaptopLensScroll/7.jpg';
+import lScroll8 from '../images/LaptopLensScroll/8.jpg';
+import lScroll9 from '../images/LaptopLensScroll/9.jpg';
+import lScroll10 from '../images/LaptopLensScroll/10.jpg';
+import lScroll11 from '../images/LaptopLensScroll/11.jpg';
+import lScroll12 from '../images/LaptopLensScroll/12.jpg';
+import lScroll13 from '../images/LaptopLensScroll/13.jpg';
+import lScroll14 from '../images/LaptopLensScroll/14.jpg';
+import lScroll15 from '../images/LaptopLensScroll/15.jpg';
+import lScroll16 from '../images/LaptopLensScroll/16.jpg';
+import lScroll17 from '../images/LaptopLensScroll/17.jpg';
+import lScroll18 from '../images/LaptopLensScroll/18.jpg';
+import lScroll19 from '../images/LaptopLensScroll/19.jpg';
+import lScroll20 from '../images/LaptopLensScroll/20.jpg';
 
 const HoverImageLens = ({ imageSrc, text }) => {
   return (

@@ -25,25 +25,25 @@ import mSlide8 from '../images/MobileProductionSlider/8.png';
 // ... (остальные изображения для мобильных)
 
 // Импорты изображений для планшетов
-import tSlide1 from '../images/TabletProductionSlider/1.png';
-import tSlide2 from '../images/TabletProductionSlider/2.png';
-import tSlide3 from '../images/TabletProductionSlider/3.png';
-import tSlide4 from '../images/TabletProductionSlider/4.png';
-import tSlide5 from '../images/TabletProductionSlider/5.png';
-import tSlide6 from '../images/TabletProductionSlider/6.png';
-import tSlide7 from '../images/TabletProductionSlider/7.png';
-import tSlide8 from '../images/TabletProductionSlider/8.png';
+import tSlide1 from '../images/TabletProductionSlider/1.jpg';
+import tSlide2 from '../images/TabletProductionSlider/2.jpg';
+import tSlide3 from '../images/TabletProductionSlider/3.jpg';
+import tSlide4 from '../images/TabletProductionSlider/4.jpg';
+import tSlide5 from '../images/TabletProductionSlider/5.jpg';
+import tSlide6 from '../images/TabletProductionSlider/6.jpg';
+import tSlide7 from '../images/TabletProductionSlider/7.jpg';
+import tSlide8 from '../images/TabletProductionSlider/8.jpg';
 // ... (остальные изображения для планшетов)
 
 // Импорты изображений для ноутбуков
-import lSlide1 from '../images/LaptopProductionSlider/1.png';
-import lSlide2 from '../images/LaptopProductionSlider/2.png';
-import lSlide3 from '../images/LaptopProductionSlider/3.png';
-import lSlide4 from '../images/LaptopProductionSlider/4.png';
-import lSlide5 from '../images/LaptopProductionSlider/5.png';
-import lSlide6 from '../images/LaptopProductionSlider/6.png';
-import lSlide7 from '../images/LaptopProductionSlider/7.png';
-import lSlide8 from '../images/LaptopProductionSlider/8.png';
+import lSlide1 from '../images/LaptopProductionSlider/1.jpg';
+import lSlide2 from '../images/LaptopProductionSlider/2.jpg';
+import lSlide3 from '../images/LaptopProductionSlider/3.jpg';
+import lSlide4 from '../images/LaptopProductionSlider/4.jpg';
+import lSlide5 from '../images/LaptopProductionSlider/5.jpg';
+import lSlide6 from '../images/LaptopProductionSlider/6.jpg';
+import lSlide7 from '../images/LaptopProductionSlider/7.jpg';
+import lSlide8 from '../images/LaptopProductionSlider/8.jpg';
 // ... (остальные изображения для ноутбуков)
 
 function ProductionSlider() {

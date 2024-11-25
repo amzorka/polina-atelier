@@ -18,9 +18,9 @@ import tSlide2 from '../images/TabletHomeSlider/2.png';
 import tSlide3 from '../images/TabletHomeSlider/3.png';
 
 // Импорты изображений для ноутбуков
-import lSlide1 from '../images/LaptopHomeSlider/1.png';
-import lSlide2 from '../images/LaptopHomeSlider/2.png';
-import lSlide3 from '../images/LaptopHomeSlider/3.png';
+import lSlide1 from '../images/LaptopHomeSlider/1.jpg';
+import lSlide2 from '../images/LaptopHomeSlider/2.jpg';
+import lSlide3 from '../images/LaptopHomeSlider/3.jpg';
 
 function HomeSlider() {
   const [currentSlides, setCurrentSlides] = useState([]);
