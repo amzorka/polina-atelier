@@ -421,6 +421,7 @@ import 'slick-carousel/slick/slick-theme.css';
   
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState(null);
     const [deviceType, setDeviceType] = useState("desktop");
   
@@ -443,6 +444,8 @@ import 'slick-carousel/slick/slick-theme.css';
   
       return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const toggleMenu = () => setMenuOpen(!isMenuOpen);
   
     const openModal = (project) => {
       setCurrentProject(project);
@@ -451,12 +454,22 @@ import 'slick-carousel/slick/slick-theme.css';
   
     const closeModal = () => {
       setIsModalOpen(false);
+      if (isMenuOpen) setMenuOpen(false);
     };
   
     return (
       <div className="gallery-page">
+        <button
+          className={`modal-close-button ${isModalOpen ? 'open' : ''}`}
+          onClick={closeModal}
+          style={{ display: isModalOpen ? 'flex' : 'none' }}
+        >
+          <div className="line-close"></div>
+          <div className="line-close"></div>
+          <div className="line-close"></div>
+        </button>
         <div className="gallery-header">
-          <MenuDark />
+          <MenuDark isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} isModalOpen={isModalOpen} />
         </div>
         <div className="gallery-container">
           {projects.map((project) => (
@@ -487,6 +500,8 @@ import 'slick-carousel/slick/slick-theme.css';
             onRequestClose={closeModal}
             project={currentProject}
             deviceType={deviceType}
+            isMenuOpen={isMenuOpen}
+            toggleMenu={toggleMenu}
           />
         )}
   

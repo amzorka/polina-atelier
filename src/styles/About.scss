@@ -16,39 +16,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
   };
   
 
   
   .about-content {
-    width: 526px;  
+    width: 592px;  
     height: 101px; 
     margin: auto;  
     text-align: justify;  
     line-height: 22.2px;  
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     font-weight: 400;
     font-size: 12px;  
     color: #8C8781; 
+    -webkit-text-stroke: 0.1px #767676;
+    -webkit-text-fill-color: #8C8781;
     letter-spacing: 0.19em; 
-    
+    text-align-last: justify;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
   };
-    p {
-      margin-bottom: 20px;
-    };
   
     .about-footer {
-        font-family: 'Kudryashev Headline Sans', sans;
+        font-family: 'Kudryashev Headline Sans';
         text-align: center;
         font-size: 12px;
         font-weight: 400;
         line-height: 22.2px;
         color: #8c8781;
+        -webkit-text-stroke: 0.1 #767676;
+        -webkit-text-fill-color: #8C8781;
         letter-spacing: 0.19em;
         padding-bottom: 20px;
       
@@ -69,10 +70,13 @@
 
       @media (max-width: 767px) {
         .about-content {
-          max-width: 100%;
-          padding: 25px;
+          width: 289px;
+          height: 146px;
           overflow: visible;
           font-size: 8px;
+          font-weight: 400;
+          line-height: 14.8px;
+          letter-spacing: 0.19em;
         }
 
         .about-footer a {
@@ -88,14 +92,32 @@
 
       @media (min-width: 768px) and (max-width: 1279px) {
         .about-content {
-          max-width: 100%;
+          width: 526px;
+          height: 101px;
           padding: 25px;
           overflow: visible;
           font-size: 12px;
+          font-weight: 400;
+          line-height: 22.2px;
+          letter-spacing: 0.19em;
+
         }
 
         .about-footer a {
           font-size: 12px;
+        }
+      }
+
+      @media (min-width: 1280px) and (max-width: 1919px) {
+        .about-content {
+          width: 468px;
+          height: 88px;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 18.5px;
+          letter-spacing: 0.19em;
+          width: 468px;
+          height: 88px;
         }
       }
 

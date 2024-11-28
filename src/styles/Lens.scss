@@ -43,13 +43,15 @@
   }
 
   .lens-footer {
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 18px;
     color: #767676;
+    -webkit-text-stroke: 0.1px #767676;
+    -webkit-text-fill-color: #8C8781;
     font-weight: 400;
     text-align: center;
     line-height: 33.3px;

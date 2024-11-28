@@ -21,7 +21,7 @@ html, body {
   height: 100vh;
   width: 100vw;
   position: relative; 
-  font-family: 'Kudryashev Headline Sans', sans;
+  font-family: 'Kudryashev Headline Sans';
 
   .overlay {
     position: absolute;
@@ -43,6 +43,7 @@ html, body {
     .center-text img {
       height: 30px;
       width: 296px;
+      margin-bottom: 70px;
     }
   }
 }

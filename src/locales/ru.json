@@ -97,7 +97,7 @@
       "mission": "МИССИЯ",
       "gallery": "ГАЛЕРЕЯ",
       "production": "ПРОИЗВОДСТВО",
-      "lens": "ОБЪЕКТИВ",
+      "lens": "ЛИНЗА",
       "ecology": "ЭКОЛОГИЯ",
       "education": "ОБРАЗОВАНИЕ"
     },
@@ -107,7 +107,7 @@
         "mission": "МИССИЯ",
         "gallery": "ГАЛЕРЕЯ",
         "production": "ПРОИЗВОДСТВО",
-        "lens": "ОБЪЕКТИВ",
+        "lens": "ЛИНЗА",
         "ecology": "ЭКОЛОГИЯ",
         "education": "ОБРАЗОВАНИЕ"
       },
@@ -117,9 +117,14 @@
           "mission": "МИССИЯ",
           "gallery": "ГАЛЕРЕЯ",
           "production": "ПРОИЗВОДСТВО",
-          "lens": "ОБЪЕКТИВ",
+          "lens": "ЛИНЗА",
           "ecology": "ЭКОЛОГИЯ",
           "education": "ОБРАЗОВАНИЕ"
+        },
+
+        "languageSwitcher": {
+            "english": "АНГЛ",
+            "russian": "РУС"
         },
 
         "productionScroll": {

@@ -7,13 +7,12 @@
   padding: 20px;
   width: 100%;
   z-index: 1000;
-  height: 60px;
-
  
   .menu-icon {
       align-items: center;
       position: absolute;
-      left: 20px;
+      left: 40px;
+      top: 40px;
       z-index: 10000;
       display: flex;
       flex-direction: column;
@@ -22,7 +21,6 @@
       height: 15px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      transform: translateY(70%);
 
     .line {
       width: 100%;
@@ -32,7 +30,7 @@
     }
 
     .line:nth-child(2) {
-      width: 70%; 
+      width: 60%; 
       align-self: center; 
     }
 
@@ -51,25 +49,33 @@
 
   .logo {
     position: absolute;
+    top: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 200.15px;
+      height: 20.12px;
+    }
   }
 
+
   .language-switcher {
-    position: absolute;
-    right: 20px;
     display: flex;
     align-items: center;
-    transform: translateY(50%);
+    position: absolute;
+    top: 40px;
+    right: 40px;
   
     a {
       margin: 0 5px;
-        font-size: 12px;
-        letter-spacing: 0.19em;
-        cursor: pointer;
-        line-height: 22.2px;
-        transition: color 0.3s ease; 
-        text-decoration: none;
+      font-family: 'Kudryashev Headline Sans';
+      font-size: 12px;
+      letter-spacing: 0.19em;
+      cursor: pointer;
+      line-height: 22.2px;
+      transition: color 0.3s ease; 
+      text-decoration: none;
     }
   
     .active {
@@ -87,139 +93,222 @@
    }
 }
 
-/* Меню */
-.menu {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  background-color: transparent; 
-  color: #8c8781;
-  max-height: 0; 
-  overflow: hidden; 
-  opacity: 0; 
-  transition: all 0.5s ease-in-out;
-
-  ul {
-    list-style: none;
-    align-items: left;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    top: 100%;
-
-    li {
-      margin: 0 15px;
-
-      a {
-        color: #8c8781;
-        text-decoration: none;
-        font-size: 10px;
-        letter-spacing: 0.24em;
-        font-weight: 400;
-        line-height: 15.46px;
-      }
-    }
-  }
-}
-
-.menu ul li a {
-  transition: color 0.3s ease-in-out, filter 0.3s ease-in-out; 
-}
-
-.menu ul li a:hover {
-  color: #666; 
-  filter: brightness(0.8);
-}
-
-.menu.open {
-  max-height: 100vh;
-  opacity: 1;
-}
-
   .menu {
-    position: fixed;
+    position: fixed; 
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/EducationBG2.png');
+    left: -370px; 
+    width: 300px; 
+    height: 100%; 
+    background-color: transparent; 
     display: flex;
     justify-content: center;
-    align-items: center;
-    transform: translateX(-100%); 
-    transition: transform 0.5s ease; 
+    align-items: center; 
+    transform: translateX(0); 
+    transition: transform 0.5s ease-in-out; 
     z-index: 999;
   }
-  
+
   .menu.open {
-    transform: translateX(0);
+    transform: translateX(300px); 
   }
   
   .menu ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    text-align: left;
   }
   
   .menu li {
-    margin: 20px 0;
+    margin: 17px 0; 
   }
   
   .menu a {
-    font-family: 'Kudryashev Headline Sans', sans;
-    color: #8c8781 !important;
-    font-size: 24px;
+    font-size: 12px;
+    line-height: 22.2px;
+    letter-spacing: 0.19em;
+    font-family: 'Kudryashev Headline Sans';
+    color: #fff; 
+    font-size: 12px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out; 
+    font-weight: 400;
+  }
+  
+  .menu a:hover {
+    color: #767676; 
   }
 
-  .menu-icon .line {
-    background-color: #8c8781;
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 88, 85, 0.2); /* Полупрозрачный цвет */
+    opacity: 0; /* По умолчанию невидим */
+    visibility: hidden; /* Прячем элемент */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 998; /* За слоем меню, но выше всего остального */
+  }
+  
+  .menu-overlay.visible {
+    opacity: 1; /* Делаем видимым */
+    visibility: visible; /* Убираем скрытие */
   }
 
   @media (max-width: 767px) {
-    .language-switcher a {
-      font-size: 8px !important;
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/EducationBG2.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-100%); 
+      transition: transform 0.5s ease; 
+      z-index: 999;
+    }
+    
+    .menu.open {
+      transform: translateX(0);
+    }
+    
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .menu li {
+      margin: 20px 0;
+    }
+    
+    .menu a {
       font-family: 'Kudryashev Headline Sans', sans;
-    } 
-    
+      color: #8c8781 !important;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  
+    .language-switcher a {
+      font-size: 11px !important;
+      font-weight: 400;
+      line-height: 14.8px !important;
+      letter-spacing: 0.19em !important;
+    }
+  
+    .logo img {
+      width: 132.1px !important;
+      height: 13.28px !important;
+    }
     .logo {
-      scale: 0.6 !important;
-      width: 132px !important;
-      height: 14px !important;
-      transform: translateX(-140%) !important;
-    }
-
-    .menu-icon {
-      transform: translateY(60%) !important;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1279px) {
-    
-    .logo {
-      scale: 0.6 !important;
-      width: 198px !important;
-      height: 20px !important;
-      transform: translateX(-140%) !important;
-    }
-
-    .menu-icon {
-      transform: translateY(110%) !important;
-      left: 40px !important;
+      z-index: 1000;
     }
 
     .language-switcher {
-      transform: translateY(70%) !important;
-      right: 40px !important;
+      z-index: 1000;
     }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1279px) {
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/EducationBG2.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-100%); 
+      transition: transform 0.5s ease; 
+      z-index: 999;
+    }
+    
+    .menu.open {
+      transform: translateX(0);
+    }
+    
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .menu li {
+      margin: 20px 0;
+    }
+    
+    .menu a {
+      font-family: 'Kudryashev Headline Sans', sans;
+      color: #8c8781 !important;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  
+    .menu.open .menu-icon .line {
+      background-color: #8c8781;
+    } 
+    
+    .logo img {
+      width: 198px !important;
+      height: 20px !important;
+
+    }
+
+    .logo {
+      z-index: 1000;
+    }
+
+    .language-switcher {
+      z-index: 1000;
+    }
+  
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
-    .menu-icon {
-      transform: translateY(60%) !important;
+    .logo img {
+      width: 158px !important;
+      height: 16px !important;
     }
   }
+
+@media (max-width: 1279px) {
+
+  .menu-header {
+
+    &.dark-menu {
+      transition: background-color 0.3s ease, color 0.3s ease;
+  
+      .menu-icon .line {
+        background-color: #8c8781; /* Линии меню становятся черными */
+        transition: background-color 0.3s ease;
+      }
+  
+      .logo img {
+        filter: invert(51%) sepia(5%) saturate(132%) hue-rotate(180deg) brightness(85%) contrast(90%);
+        transition: filter 0.3s ease;
+      }
+  
+      .language-switcher a {
+        color: #8c8781 !important;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+  }
+}
+  
+
+
+  // ДУХАРААААААААААААААААААААААААААА

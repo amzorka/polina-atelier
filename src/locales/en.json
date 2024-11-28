@@ -126,6 +126,11 @@
         "education": "EDUCATION"
       },
 
+      "languageSwitcher": {
+        "english": "EN",
+        "russian": "RU"
+      },
+
       "productionScroll": {
           "name1": "SERGEY",
           "age1": "51 Y. O",

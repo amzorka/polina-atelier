@@ -7,12 +7,12 @@
 }
 
 .image-scroll {
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     display: flex;
     flex-direction: row; 
     white-space: nowrap; 
     overflow-x: scroll; 
-    gap: 20px; 
+    gap: 15px; 
     height: 395px; 
     max-width: 100vw; 
     max-height: 100vh;
@@ -78,7 +78,7 @@
   
   .hover-text {
     margin: 5px 0; /* Отступы между строками */
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     color: #8c8781;
     font-weight: 400;
     font-size: 12px;
@@ -93,7 +93,6 @@
   @media (max-width: 767px) {
     .image-scroll {
       height: 262px;
-      gap: 5px;
     }
     
     .image-scroll img {
@@ -116,7 +115,6 @@
   @media (min-width: 768px) and (max-width: 1279px) {
     .image-scroll {
       height: 369px;
-      gap: 20px;
     }
 
     .image-scroll img {
@@ -139,7 +137,6 @@
   @media (min-width: 1280px) and (max-width: 1919px) {
     .image-scroll {
       height: 369px;
-      gap: 15px;
     }
 
     .image-scroll img {

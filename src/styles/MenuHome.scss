@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Kudryashev Headline Sans';  
+  src: url('../fonts/kudryashevheadline-sans.woff2') format('woff2'),
+       url('../fonts/kudryashevheadline-sans.woff') format('woff');
+  font-weight: 400;  
+  font-style: normal;
+}
+
 .menuhome-header {
   display: flex;
   justify-content: space-between;
@@ -7,9 +15,12 @@
   position: relative;
 
     .contacts-link {
-      justify-self: start;
+      position: absolute;
+      top: 40px;
+      left: 40px;
   
       a {
+        font-family: 'Kudryashev Headline Sans';
         color: white;
         font-size: 12px;
         font-weight: 400;
@@ -19,14 +30,17 @@
         transition: color 0.3s ease-in-out;
   
         &:hover {
-          color: #666; 
+          color: rgb(208, 208, 208); 
         }
       }
     }
   
     /* Иконка меню-бургера */
     .menu-icon-home {
-      position: relative;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -35,7 +49,6 @@
       height: 15px;
       cursor: pointer;
       transition: all 0.3s ease-in-out; 
-      transform: translateX(-60%);
   
       .line {
         width: 100%;
@@ -45,7 +58,7 @@
       }
   
       .line:nth-child(2) {
-        width: 70%; 
+        width: 60%; 
         align-self: center; 
       }
   
@@ -65,11 +78,14 @@
     .language-switcher {
       display: flex;
       align-items: center;
-      transform: translateY(0%);
-    
+      position: absolute;
+      top: 40px;
+      right: 40px;
+
       a {
         margin: 0 5px;
-        font-size: 12px;
+        font-family: 'Kudryashev Headline Sans';
+        font-size: 11px !important;
         letter-spacing: 0.19em;
         cursor: pointer;
         line-height: 22.2px;
@@ -82,7 +98,7 @@
       }
   
       .inactive {
-        color: grey !important; 
+        color: rgb(208, 208, 208) !important; 
       }
     
       span {
@@ -95,7 +111,7 @@
   /* Меню */
   .menu-home {
     position: absolute;
-    top: 80px;
+    top: 185px;
     left: 0;
     right: 0;
     background-color: transparent; 
@@ -111,7 +127,7 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
       justify-content: center;
       top: 100%;
   
@@ -119,6 +135,7 @@
         margin: 0 15px;
   
         a {
+          font-family: 'Kudryashev Headline Sans';
           color: white;
           text-decoration: none;
           font-size: 12px;
@@ -136,7 +153,7 @@
   }
   
   .menu-home ul li a:hover {
-    color: #666; 
+    color: #d3d1d1; 
     filter: brightness(0.8);
   }
     
@@ -146,35 +163,50 @@
   }
 
   @media (max-width: 767px) {
+
+    .menu-home {
+      top: 130px;
+    }
+
+    .language-switcher {
+      font-size: 11px !important;
+      font-weight: 400;
+      line-height: 14.8px !important;
+      letter-spacing: 0.19em !important;
+      top: 45px !important;
+    }
+
     .contacts-link a {
-      font-size: 8px !important;
+      font-size: 11px !important;
       font-weight: 400;
       line-height: 14.8px !important;
       letter-spacing: 0.19em !important;
     }
 
     .menu-home a {
-      font-size: 8px !important;
+      font-size: 11px !important;
       font-weight: 400 !important;
       line-height: 14.8px !important;
       letter-spacing: 0.19em !important;
     }
-
-    .menu-icon-home {
-      transform: translateX(-20%) !important; 
-    }
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
-    .menu-icon-home {
-      transform: translateX(-50%) !important;
+  @media (min-width: 768px) and (max-width: 1279px){
+
+    .menu-home {
+      top: 240px;
     }
 
+    .language-switcher a {
+      font-size: 12px !important;
+      font-weight: 400;
+      line-height: 22.2px !important;
+    }
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
-    .menu-icon-home {
-      transform: translateX(-60%) !important;
+    .menu-home.open {
+      top: 120px;
     }
   }
 

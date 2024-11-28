@@ -9,8 +9,7 @@
 .education {
     width: 100vw;
     height: 100%;
-    font-family: 'Kudryashev Headline Sans', sans;
-    color: white;
+    font-family: 'Kudryashev Headline Sans';
   }
   
  
@@ -27,6 +26,7 @@
   
 
   .second-section {
+    position: relative;
     background-image: url('/images/EducationBG2.png'); 
     background-size: cover;
     background-position: center;
@@ -40,43 +40,49 @@
   }
   
   .education-content {
-    font-family: 'Kudryashev Headline Sans', sans;
+    color: #ffffff; 
+    -webkit-text-stroke: 0.1px #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    font-family: 'Kudryashev Headline Sans';
     text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 33.3px;
     letter-spacing: 0.19em;
-    padding: 0 20px;
+    margin-bottom: 20px;
   }
   
   .education-text {
 
     .justified {
-    font-family: 'Kudryashev Headline Sans', sans;
-    width: 468px;
-    height: 75px;
+    font-family: 'Kudryashev Headline Sans';
+    width: 506px;
+    height: 123px;
     margin: auto;
     text-align: justify;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     padding: 0 20px;
-    line-height: 18.5px;
-    letter-spacing: 0.2em;
+    line-height: 22.2px;
+    letter-spacing: 0.19em;
     color: #8c8781;
+    -webkit-text-stroke: 0.1px #767676;
+    -webkit-text-fill-color: #8C8781;
     margin-bottom: 1em;
+    text-align-last: justify;  
     }
 
     .centroid {
-      font-family: 'Kudryashev Headline Sans', sans;
-      width: 468px;
-      height: 75px;
+      font-family: 'Kudryashev Headline Sans';
+      width: 506px;
+      height: 123px;
       margin: auto;
       text-align: center;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 400;
       padding-top: 50px;
-      line-height: 18.5px;
-      letter-spacing: 0.2em;
+      line-height: 22.2px;
+      letter-spacing: 0.19em;
       color: #8c8781;
 
       a {
@@ -87,14 +93,19 @@
       }
   }
   
-  .education-footer {
-    font-family: 'Kudryashev Headline Sans', sans;
-    text-align: center;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 18.5px;
-    letter-spacing: 0.2em;
-    color: #8c8781;
+  .bird-logo-container {
+    position: absolute;
+    bottom: 20px; /* Расстояние от нижнего края секции */
+    left: 50%;
+    transform: translateX(-50%); /* Центрируем по горизонтали */
+    z-index: 10;
+
+    .bird-logo {
+      width: 50px; /* Задайте размер логотипа */
+      height: auto;
+      opacity: 0.8; /* Небольшая прозрачность для стилистики */
+      transition: opacity 0.3s ease-in-out
+    }
   }
 
   @media (max-width: 767px) {
@@ -110,6 +121,7 @@
 
     .justified {
       width: 289px !important;
+      height: 121px !important;
       font-size: 8px !important;
       font-weight: 400 !important;
       line-height: 14.8px !important;
@@ -127,8 +139,8 @@
       letter-spacing: 0.19em;
     }
 
-    .education-footer img {
-      display: none;
+    .bird-logo {
+      width: 27px;
     }
   }
 
@@ -145,6 +157,7 @@
 
     .justified {
       width: 506px !important;
+      height: 99px !important;
       font-size: 12px !important;
       font-weight: 400 !important;
       line-height: 22.2px !important;
@@ -161,14 +174,41 @@
       line-height: 22.2px;
       letter-spacing: 0.19em;
     }
-
-    .education-footer img {
-      display: none;
-    }
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
     .first-section {
       background-image: url('/images/EducationBG1L.jpg'); 
+    }
+
+    .education-content {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24.78px;
+      letter-spacing: 0.23em;
+    }
+
+    .justified {
+      width: 468px !important;
+      height: 75px !important;
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      line-height: 18.5px !important;
+      letter-spacing: 0.19em !important;
+    }
+
+    .centroid {
+      width: 468px !important;
+    }
+
+    .centroid a {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22.2px;
+      letter-spacing: 0.19em;
+    }
+
+    .bird-logo {
+      width: 39px;
     }
   }

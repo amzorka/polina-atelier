@@ -33,7 +33,7 @@ function MenuHome() {
         <div className="line"></div>
       </div>
 
-      <LanguageSwitcher />
+      <LanguageSwitcher className='language-switcher-home'/>
 
       <nav className={`menu-home ${isMenuOpen ? 'open' : ''}`}>
         <ul>

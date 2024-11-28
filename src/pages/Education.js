@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import '../styles/Education.scss';
 import Menu from '../components/Menu';
-import logo from '../images/EduFrame.png';
 
 function Education() {
   const { t } = useTranslation();
@@ -25,9 +24,9 @@ function Education() {
             <a href='mailto:info@polina-atelier.com?subject=question'>{t('education.email')}</a>
           </p>
         </div>
-        <footer className="education-footer">
-          <img src={logo} alt="Education Frame" />
-        </footer>
+        <div className="bird-logo-container">
+          <img src={require('../images/birdLogo.png')} alt="Bird Logo" className="bird-logo" />
+        </div>
       </section>
     </div>
   );

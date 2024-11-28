@@ -7,20 +7,79 @@
 }
 
 
+
 .gallery-header {
     font-family: 'Kudryashev Headline Sans', sans;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     z-index: 1000;
   }
+
+  .gallery-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 260px; /* Высота градиента */
+      background-image: url('/images/GradientToBottom.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1; /* Псевдоэлемент будет находиться позади содержимого */
+      pointer-events: none;
+}
+button:not(.modal-close-button) {
+  display: block; /* Применяйте только к другим кнопкам */
+}
+
+.modal-close-button {
+  position: fixed !important;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px; /* Установить ширину кнопки */
+  height: 15px; /* Установить высоту кнопки */
+  cursor: pointer;
+  z-index: 100001;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.modal-close-button .line-close {
+  width: 100%;
+  height: 1px;
+  background-color: #5d5855; /* Цвет линий */
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-close-button .line-close:nth-child(2) {
+  width: 60%; 
+  align-self: center; 
+}
+
+.modal-close-button.open .line-close:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.modal-close-button.open .line-close:nth-child(2) {
+  opacity: 0; 
+}
+
+.modal-close-button.open .line-close:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
   
   
   .gallery-container {
@@ -32,11 +91,10 @@
     flex-direction: column;
     align-items: center; 
     gap: 20px; 
-    padding: 80px 20px; 
   }
   
   .gallery-item {
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     width: 262px; 
     height: 533px; 
     overflow: hidden;
@@ -60,12 +118,12 @@
   
   
   .gallery-footer {
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+    height: auto;
     text-align: center;
     padding: 30px;
     font-size: 18px;
@@ -74,10 +132,26 @@
     letter-spacing: 0.19em;
     z-index: 100;
   }
+
+  .gallery-footer::before {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 335px; /* Высота градиента */
+    background-image: url('/images/GradientToTop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Псевдоэлемент будет находиться позади содержимого */
+  }
   
   .gallery-footer p {
     margin: 0;
     color: #767676;
+    -webkit-text-stroke: 0.1px #767676;
+    -webkit-text-fill-color: #8C8781;
   }
 
   @media (max-width: 767px) {

@@ -9,38 +9,41 @@
 .ecology {
     height: 100vh;
     width: 100vw;
-    background-image: url('/images/EcologyBG.jpg'); 
+    background-image: url('/images/EcologyBGD.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white; 
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
   }
     
   .ecology-content {
     width: 468px;  
-    height: 75px; 
+    height: 102px; 
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align-last: justify;
     text-align: justify;
-    font-family: 'Kudryashev Headline Sans', sans;
+    font-family: 'Kudryashev Headline Sans';
+    color: #ffffff; 
+    -webkit-text-stroke: 0.1px #ffffff;
+    -webkit-text-fill-color: #ffffff;
     padding: 0 20px;
-    line-height: 18.5px;
-    font-size: 10px;
-    letter-spacing: 0.2em;
+    line-height: 22.2px;
+    font-size: 12px;
+    letter-spacing: 0.19em;
 
     p {
       font-weight: 400;
       line-height: 22.2px;
       letter-spacing: 0.19em;
       text-align: justify;
-      font-family: 'Kudryashev Headline Sans', sans;
+      font-family: 'Kudryashev Headline Sans';
     }
   }
   
@@ -51,13 +54,21 @@
     line-height: 33.3px;
     letter-spacing: 0.19em;
     padding-bottom: 20px;
-    font-family: 'Kudryashev Headline Sans', sans;
+    color: #ffffff; 
+    -webkit-text-stroke: 0.1px #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    font-family: 'Kudryashev Headline Sans';
   }
 
   @media (max-width: 767px) {
 
+    .ecology {
+      background-image: url('/images/EcologyBGM.jpg');
+    }
+
     .ecology-content {
-      width: 289px;  
+      width: 289px;
+      height: 75px;  
       overflow: visible;
       font-size: 8px;
       font-weight: 400;
@@ -75,15 +86,18 @@
 
   @media (min-width: 768px) and (max-width: 1279px) {
 
+    .ecology {
+      background-image: url('/images/EcologyBGT.jpg');
+    }
+
     .ecology-content {
-      width: 468px;  
+      width: 468px; 
+      height: 75px; 
       overflow: visible;
-      font-family: Kudryashev Headline Sans;
       font-size: 12px;
       font-weight: 400;
       line-height: 22.2px;
       letter-spacing: 0.19em;
-      text-align: justified;
     }
 
     .ecology-footer { 
@@ -94,3 +108,26 @@
     }
   }
 
+
+  @media (min-width: 1280px) and (max-width: 1919px) {
+
+    .ecology {
+      background-image: url('/images/EcologyBGL.jpg');
+    }
+    .ecology-content {
+      width: 468px;
+      height: 75px;
+      overflow: visible;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 18.5px;
+      letter-spacing: 0.19em;
+    }
+
+    .ecology-footer {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24.78px;
+      letter-spacing: 0.23em;
+    }
+  }

@@ -11,12 +11,14 @@ import i18n from '../locales/i18n';
 
 function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
   const currentLanguage = i18n.language;
   const [deviceType, setDeviceType] = useState('desktop');
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
+      setIsMobileOrTablet(width <= 1279);
       if (width <= 768) {
         setDeviceType('mobile');
       } else if (width <= 1279) {
@@ -61,7 +63,11 @@ function Menu() {
   };
 
   return (
-    <header className="menu-header">
+    <header
+      className={`menu-header ${
+        isMenuOpen && isMobileOrTablet ? 'dark-menu' : ''
+      }`}
+    >
       <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="line"></div>
         <div className="line"></div>
@@ -98,6 +104,10 @@ function Menu() {
           </li>
         </ul>
       </nav>
+      <div
+        className={`menu-overlay ${isMenuOpen ? 'visible' : ''}`}
+        onClick={toggleMenu}
+      />
     </header>
   );
 }
