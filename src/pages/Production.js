@@ -12,6 +12,12 @@ function Production() {
 
   const [isMobile, setIsMobile] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для меню
+  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 767);
@@ -29,7 +35,11 @@ function Production() {
   return (
     <div className="production-page">
       <section className="first-section-production">
-        <MenuDark />
+        <MenuDark 
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        isModalOpen={isModalOpen}
+        />
         <ProductionScroll /> 
         <div className="centered-text">
           {t('production.people')}

@@ -1,15 +1,25 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import { useTranslation} from 'react-i18next';
 import './../styles/About.scss';
 import MenuDark from '../components/MenuDark';
 
 
 function About() {
   const { t } = useTranslation();
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для меню
+  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для модального окна
 
   return (
     <div className="about">    
-        <MenuDark />
+        <MenuDark  
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+          isModalOpen={isModalOpen}
+        />
       <main className="about-content">
         <p>
         {t("about.content")}
