@@ -30,14 +30,13 @@ html, body {
  
   .first-section-production {
     position: relative;
-    background-image: url('/images/EducationBG2.png'); 
+    background-image: url('/images/AboutBG.png'); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100vh; 
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
     scroll-snap-align: start;
   }
     
@@ -80,6 +79,13 @@ html, body {
 }
 
 @media(max-width: 767px) {
+
+  .first-section-production {
+    background-image: url('../images/EducationBG2MPLE.png');
+  }
+
+
+
   .centered-text {
     font-size: 12px;
     font-weight: 400;
@@ -97,6 +103,11 @@ html, body {
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
+
+  .first-section-production {
+    background-image: url('../images/EducationBG2TPLE.jpg');
+  }
+
   .centered-text {
     font-size: 18px;
     font-weight: 400;

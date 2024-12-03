@@ -4,7 +4,7 @@ import MenuHome from '../components/MenuHome'
 import './../styles/Home.scss';
 import mobileLogo from '../images/Logos/mobileLogo.png';
 import tabletLogo from '../images/Logos/tabletLogo.png';
-import laptopLogo from '../images/Logos/laptopLogo.png';
+import laptopLogo from '../images/MenuLogos/laptopLightLogo.png';
 import desktopLogo from '../images/Logos/desktopLogo.png';
 import 'slick-carousel/slick/slick.css';   
 import 'slick-carousel/slick/slick-theme.css';
