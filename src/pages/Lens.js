@@ -7,9 +7,9 @@ import Menu from '../components/Menu';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
 function Lens() {
   const { t } = useTranslation();
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

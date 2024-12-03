@@ -8,7 +8,8 @@
 
 
  .overlay-modal {
-    background-image: url('../images/EducationBG2.png');
+    background-image: url('../images/AboutBG.png');
+    background-size: contain;
      position: fixed;
      top: 0;
      left: 0;
@@ -25,9 +26,18 @@
     pointer-events: none;
 
    }
+
+   .overlay-modal.ReactModal__Overlay--after-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .overlay-modal.ReactModal__Overlay--before-close {
+    opacity: 0;
+    visibility: hidden;
+  }
   
   .modal {
-    background-image: url('../images//EducationBG2.png');
     max-width: 90vw;
     max-height: 90vh;
     width: 100%;
@@ -47,13 +57,19 @@
 
   }
 
+  .modal.ReactModal__Content--after-open {
+    opacity: 1;
+  }
+  
+  .modal.ReactModal__Content--before-close {
+    opacity: 0;
+  }
+
   .modal-open .page-content {
     display: none;
 }
   
   .modal-content {
-    background-image: url('../images//EducationBG2.png');
-    padding: 20px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -79,19 +95,20 @@
     overflow: hidden;
     margin: 0 auto;
     border: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
   
   .project-title {
     font-family: 'Kudryashev Headline Sans';
     font-size: 18px;
     font-weight: 400;
-    line-height: 33.3px;
+    line-height: 185%;
     letter-spacing: 0.19em;
-    margin-bottom: 60px;
     width: 350px;
     height: 19px;
-    color: #8c8787;
-    -webkit-text-stroke: 0.1px #767676;
+    color: #767676;
+    -webkit-text-stroke: 0.1px #8C8781;
     -webkit-text-fill-color: #8C8781;
     text-align: center;
   }
@@ -108,21 +125,20 @@
     width: auto;
     display: block;
     margin: 0 auto;
-    object-fit: contain;
+    object-fit: cover;
   }
   
   .project-description {
     font-family: 'Kudryashev Headline Sans';
     letter-spacing: 0.19em;
-    color: #8c8787;
+    color: #767676;
     -webkit-text-stroke: 0.1px #767676;
-    -webkit-text-fill-color: #8C8781;
+    -webkit-text-fill-color: #767676;
     font-weight: 400;
-    margin-top: 60px;
     font-size: 12px;
     width: 261px;
-    height: 71px;
-    line-height: 22.2px;
+    height: auto;
+    line-height: 185%;
     text-align: justify;
     text-align-last: justify;
   }
@@ -130,36 +146,46 @@
 
   @media (max-width: 767px) {
 
+    .overlay-modal {
+      background-image: url('/images/EducationBG2MAGPM.png');
+      background-size: contain;
+    }
+
     .pr-slider-container {
       height: 261px;
       width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
 
     .pr-slider-image img{
-      max-width: 360px;
+      width: 173px;
       height: 261px;
     }
 
     .project-title {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 21.24px;
-      letter-spacing: 0.23em;
+      letter-spacing: 177%;
       max-width: 172.5px;
-      margin-bottom: 40px;
+      letter-spacing: 23%;
     }
 
     .project-description {
-      font-size: 8px;
+      font-size: 10px;
       font-weight: 400;
-      line-height: 14.8px;
       letter-spacing: 0.19em;
       width: 173px;
-      margin-top: 40px;
     }
   }
 
   @media (min-width: 768px) and (max-width: 1279px) {
+
+    .overlay-modal {
+      background-image: url('/images/EducationBG2TAGPM.jpg');
+      background-size: contain;
+
+    }
 
     .pr-slider-container {
       height: 369px;
@@ -174,7 +200,6 @@
     .project-title {
       font-size: 18px;
       font-weight: 400;
-      line-height: 33.3px;
       letter-spacing: 0.19em;
       width: 246px;
     }
@@ -182,7 +207,6 @@
     .project-description {
       font-size: 12px;
       font-weight: 400;
-      line-height: 22.2px;
       letter-spacing: 0.19em;
       width: 246px;
     }
@@ -203,7 +227,6 @@
     .project-title {
       font-size: 14px;
       font-weight: 400;
-      line-height: 24.78px;
       letter-spacing: 0.23em;
       width: 242px;
     }
@@ -211,7 +234,6 @@
     .project-description {
       font-size: 12px;
       font-weight: 400;
-      line-height: 22.2px;
       letter-spacing: 0.19em;
       width: 243px;
     }

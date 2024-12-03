@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 function LanguageSwitcherDark() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const location = useLocation();
   const currentLanguage = i18n.language;
 
@@ -43,14 +43,14 @@ function LanguageSwitcherDark() {
             className={currentLanguage === 'en' ? 'active' : 'inactive'}
             onClick={() => i18n.changeLanguage('en')}
           >
-            EN
+             {t('languageSwitcher.english')}
           </a>
           <span>|</span>
           <a
             className={currentLanguage === 'ru' ? 'active' : 'inactive'}
             onClick={() => i18n.changeLanguage('ru')}
           >
-            РУС
+            {t('languageSwitcher.russian')}
           </a>
         </>
       )}
