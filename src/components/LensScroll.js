@@ -85,10 +85,58 @@ import lScroll18 from '../images/LaptopLensScroll/18.jpg';
 import lScroll19 from '../images/LaptopLensScroll/19.jpg';
 import lScroll20 from '../images/LaptopLensScroll/20.jpg';
 
-const HoverImageLens = ({ imageSrc, text }) => {
+const GAP_SIZE = 15
+
+/**
+ * Копирует поведение media-query в LensScroll.scss
+ */
+const getDefaultImageWidth = () => {
+	const width = window.innerWidth
+
+	if (width <= 768) {
+		return 173
+	}
+
+	if (width >= 768 && width <= 1279) {
+		return 246
+	}
+
+	if (width >= 1280 && width <= 1919) {
+		return 243
+	}
+
+	return 262
+}
+
+/**
+ * Вычисляет итоговый размер списка изображений с учетом гэпа из GAP_SIZE
+ * 
+ * @param {number} count Количество картинок
+ * @param {number} width Ширина картинок
+ */
+const getImagesSizeWithGap = (count, width) => count * width + (count - 1) * GAP_SIZE
+
+/**
+ * Вычисляет максимальное количество картинок, которые влезут на экран, при дефолтном размере, при учете гэпа
+ */
+const getMaxFullVisibleImagesCount = () => {
+  const imageWidth = getDefaultImageWidth()
+  const screenWidth = window.innerWidth
+  
+  let imagesCount = 1
+
+  while (getImagesSizeWithGap(imagesCount, imageWidth) <= screenWidth) {
+    imagesCount++
+  }
+
+  return imagesCount - 1
+}
+
+
+const HoverImageLens = ({ imageSrc, text, imageStyle }) => {
   return (
     <div className="hover-container-lens">
-      <img src={imageSrc} alt="Hover Effect" />
+      <img src={imageSrc} alt="Hover Effect" style={{...imageStyle, backgroundSize: 'contain'}} />
       <div className="hover-text-lens">{text}</div>
     </div>
   );
@@ -96,6 +144,7 @@ const HoverImageLens = ({ imageSrc, text }) => {
 
 function LensScroll() {
   const [currentImages, setCurrentImages] = useState([]);
+  const [imageWidth, setImageWidth] = useState(getDefaultImageWidth())
 
   useEffect(() => {
     const updateImages = () => {
@@ -118,10 +167,28 @@ function LensScroll() {
     return () => window.removeEventListener('resize', updateImages); 
   }, []);
 
+  useEffect(() => {
+    const updateImagesWidth = () => {
+      const defaultWidth = getDefaultImageWidth()
+      const fullVisibleImagesCount = getMaxFullVisibleImagesCount()
+
+      const freeWidth = window.innerWidth - getImagesSizeWithGap(fullVisibleImagesCount, defaultWidth)
+
+      setImageWidth(defaultWidth + (freeWidth / fullVisibleImagesCount))
+    }
+
+    updateImagesWidth()
+
+    window.addEventListener('resize', updateImagesWidth)
+
+    return () => window.removeEventListener('resize', updateImagesWidth)
+  }, [])
+
+
   return (
     <div className="image-scroll-lens">
       {currentImages.map((imageSrc, index) => (
-        <HoverImageLens key={index} imageSrc={imageSrc} />
+        <HoverImageLens key={index} imageSrc={imageSrc} imageStyle={{width: imageWidth}} />
       ))}
     </div>
   );
