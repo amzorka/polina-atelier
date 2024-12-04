@@ -22,6 +22,10 @@
     scrollbar-width: none; 
   }
 
+  .image-scroll-lens::-webkit-scrollbar {
+    display: none; 
+  }
+
 
 @media (min-width: 1280px) and (max-width: 1919px)  {
 
