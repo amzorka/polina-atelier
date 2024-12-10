@@ -6,11 +6,14 @@
   font-style: normal;
 }
 
+:root {
+  --menu-spacing: 20px; /* По умолчанию */
+}
+
 .menuhome-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   width: 100%;
   position: relative;
 
@@ -45,8 +48,8 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 20px;
-      height: 15px;
+      width: 15.5px;
+      height: 12px;
       cursor: pointer;
       transition: all 0.3s ease-in-out; 
   
@@ -63,7 +66,7 @@
       }
   
       &.open .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(4px, 4px);
       }
   
       &.open .line:nth-child(2) {
@@ -71,7 +74,7 @@
       }
   
       &.open .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(4px, -4px);
       }
     }
     
@@ -85,7 +88,7 @@
       a {
         margin: 0 5px;
         font-family: 'Kudryashev Headline Sans';
-        font-size: 11px !important;
+        font-size: 12px;
         letter-spacing: 0.19em;
         cursor: pointer;
         line-height: 22.2px;
@@ -111,30 +114,33 @@
   /* Меню */
   .menu-home {
     position: absolute;
-    top: 185px;
+    top: var(--menu-top-offset, 15%); /* Смещение сверху */
     left: 0;
     right: 0;
-    background-color: transparent; 
-    max-height: 0; 
-    overflow: hidden; 
-    opacity: 0; 
-    transition: all 0.5s ease-in-out; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: calc(80% - var(--menu-bottom-offset, 10%)); /* Ограничение по высоте */
+    gap: var(--menu-gap, 20px); /* Динамический gap между ссылками */
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
   
     ul {
       list-style: none;
-      align-items: center;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      justify-content: center;
-      top: 100%;
+      gap: calc(1vh); /* Расстояние между ссылками */
+      align-items: center;
   
       li {
         margin: 0 15px;
   
         a {
+          text-decoration: none;
           font-family: 'Kudryashev Headline Sans';
           color: white;
           text-decoration: none;
@@ -164,38 +170,61 @@
 
   @media (max-width: 767px) {
 
-    .menu-home {
-      top: 130px;
+    .menu-home ul{
+      gap: 3px; /* Расстояние между ссылками */
     }
 
+    .menu-icon {
+      width: 10px !important;
+      height: 9px !important;
+      top: 43px !important;
+  
+      &.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(1px, 1px) !important;
+      }
+  
+      &.open .line:nth-child(2) {
+        opacity: 0; 
+      }
+  
+      &.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(4.8px, -4.5px) !important;
+      }
+    }
+
+
     .language-switcher {
-      font-size: 11px !important;
+      font-size: 10px !important;
       font-weight: 400;
-      line-height: 14.8px !important;
+      line-height: 185% !important;
       letter-spacing: 0.19em !important;
       top: 45px !important;
     }
 
     .contacts-link a {
-      font-size: 11px !important;
+      font-size: 10px !important;
       font-weight: 400;
-      line-height: 14.8px !important;
+      line-height: 185% !important;
       letter-spacing: 0.19em !important;
     }
 
     .menu-home a {
-      font-size: 11px !important;
+      font-size: 10px !important;
       font-weight: 400 !important;
-      line-height: 14.8px !important;
+      line-height: 185% !important;
       letter-spacing: 0.19em !important;
     }
   }
 
   @media (min-width: 768px) and (max-width: 1279px){
-
-    .menu-home {
-      top: 240px;
+  
+    .menu-home a {
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      line-height: 185% !important;
+      letter-spacing: 0.19em !important;
     }
+
 
     .language-switcher a {
       font-size: 12px !important;
@@ -205,8 +234,27 @@
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
-    .menu-home.open {
-      top: 120px;
+
+    .contacts-link a {
+      font-size: 10px !important;
+      font-weight: 400;
+      line-height: 185% !important;
+      letter-spacing: 0.19em !important;
     }
+    
+    .menu-home a {
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      line-height: 185% !important;
+      letter-spacing: 0.19em !important;
+    }
+
+
+    .language-switcher a {
+      font-size: 10px !important;
+      font-weight: 400;
+      line-height: 22.2px !important;
+    }
+  
   }
 

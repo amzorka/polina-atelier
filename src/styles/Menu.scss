@@ -17,8 +17,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 20px;
-      height: 15px;
+      width: 15.5px;
+      height: 12px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
@@ -35,7 +35,7 @@
     }
 
     &.open .line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
+      transform: rotate(45deg) translate(4px, 4px);
     }
 
     &.open .line:nth-child(2) {
@@ -43,7 +43,7 @@
     }
 
     &.open .line:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
+      transform: rotate(-45deg) translate(4px, -4px);
     }
   }
 
@@ -115,12 +115,13 @@
   .menu ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-left: 50px;
     text-align: left;
   }
   
   .menu li {
-    margin: 17px 0; 
+    margin-top: 17px; 
+    margin-bottom: 20px;
   }
   
   .menu a {
@@ -145,7 +146,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(93, 88, 85, 0.2); /* Полупрозрачный цвет */
+    background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный цвет */
     mix-blend-mode: color-burn;
     opacity: 0; /* По умолчанию невидим */
     visibility: hidden; /* Прячем элемент */
@@ -160,41 +161,63 @@
 
   @media (max-width: 767px) {
 
+    .menu-icon {
+      width: 11px !important;
+      height: 9px !important;
+      top: 43px !important;
+  
+      &.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(1px, 1px) !important;
+      }
+  
+      &.open .line:nth-child(2) {
+        opacity: 0; 
+      }
+  
+      &.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(4.8px, -4.5px) !important;
+      }
+    }
+
     .menu {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('../images/EducationBG2MAGPM.png');
+      background-image: url('../images/AboutBG.png');
       background-size: contain;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: translateX(-100%); 
-      transition: transform 0.5s ease; 
+      transform: translateX(0%) !important;
       z-index: 999;
     }
     
     .menu.open {
-      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
     
     .menu ul {
       list-style: none;
       padding: 0;
       text-align: center;
+      margin: 0;
     }
     
     .menu li {
-      margin: 40px 0;
+      margin: 25px 0;
       font-size: 11px;
     }
     
     .menu a {
       font-family: 'Kudryashev Headline Sans', sans;
       color: #8c8781 !important;
-      font-size: 12px;
+      font-size: 10px;
       text-decoration: none;
     }
   
@@ -226,29 +249,53 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('/images/EducationBG2TAGPM.jpg');
+      background-image: url('../images/AboutBG.png');
       background-size: contain;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: translateX(-100%); 
-      transition: transform 0.5s ease; 
+      transform: translateX(0%) !important;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
       z-index: 999;
+    }
+
+    .menu-icon {
+      width: 19.5px !important;
+      height: 15px !important;
+  
+      &.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px) !important;
+      }
+  
+      &.open .line:nth-child(2) {
+        opacity: 0; 
+      }
+  
+      &.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px) !important;
+      }
+  
     }
     
     .menu.open {
-      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
     
     .menu ul {
       list-style: none;
       padding: 0;
-      text-align: center;
+      text-align: left;
+      position: absolute;
+      left: -10px;
     }
     
     .menu li {
-      margin: 70px 0;
-      font-size: 10px;
+      margin: 35px 0;
+      font-size: 12px;
     }
     
     .menu a {
@@ -279,15 +326,49 @@
   }
 
   @media (min-width: 1280px) and (max-width: 1919px) {
+
+    .menu-icon {
+      width: 11px !important;
+      height: 9px !important;
+  
+      &.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(1px, 1px) !important;
+      }
+  
+      &.open .line:nth-child(2) {
+        opacity: 0; 
+      }
+  
+      &.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(4.8px, -4.5px) !important;
+      }
+    }
+
     .logo img {
       width: 158px !important;
       height: 16px !important;
     }
 
     .menu li a{
+      margin-bottom: 12px;
+      margin-top: 7px;
       font-size: 10px;
       line-height: 185%;
       letter-spacing: 0.19em;
+    }
+
+    .menu ul {
+      margin-left: 10px;
+    }
+
+    .menu li a{
+      font-size: 10px;
+      line-height: 185%;
+      letter-spacing: 0.19em;
+    }
+
+    .language-switcher a {
+      font-size: 10px !important;
     }
   }
 

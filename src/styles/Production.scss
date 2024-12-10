@@ -6,21 +6,11 @@
   font-style: normal; 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-}
 
 .production-page {
     font-family: 'Kudryashev Headline Sans';
     width: 100%;
-    height: 200%;
+    height: 200dvh;
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;
@@ -35,7 +25,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%; 
+    height: 100dvh; 
     background-size: contain;
     scroll-snap-align: start;
   }
@@ -45,20 +35,20 @@ html, body {
     font-size: 18px;
     line-height: 33.3px;
     text-align: center;
-    margin-bottom: 20px;
     letter-spacing: 0.19em;
     font-weight: 400;
     color: #767676;
     -webkit-text-stroke: 0.1px #767676;
     -webkit-text-fill-color: #8C8781; 
     position: relative;
+    bottom: 50px;
 } 
   .second-section-production {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    height: 100dvh; 
     width: 100vw;
     z-index: 1;
     overflow: hidden;
@@ -67,7 +57,7 @@ html, body {
 .production-footer {
   font-family: 'Kudryashev Headline Sans';
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
@@ -84,13 +74,14 @@ html, body {
     background-image: url('../images/EducationBG2MPLE.png');
   }
 
-
+  
 
   .centered-text {
     font-size: 12px;
     font-weight: 400;
     line-height: 21.24px;
     letter-spacing: 0.23em;
+    bottom: 50px;
   }
 
   .production-footer {
@@ -99,37 +90,49 @@ html, body {
     line-height: 21.24px;
     letter-spacing: 0.23em;
     white-space: nowrap;
+    bottom: 50px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
 
+
   .first-section-production {
     background-image: url('../images/EducationBG2TPLE.jpg');
-  }
 
+  }
   .centered-text {
     font-size: 18px;
     font-weight: 400;
-    line-height: 33.3px;
+    line-height: 185%;
     letter-spacing: 0.19em;
+    bottom: 50px;
   }
 
   .production-footer {
     font-size: 18px;
     font-weight: 400;
-    line-height: 33.3px;
+    line-height: 185%;
     letter-spacing: 0.19em;
     white-space: nowrap;
+    bottom: 50px;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
+
+  .first-section-production {
+    background-image: url('../images/EducationBG2TPLE.jpg');
+  }
+
+
+
   .centered-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 24.78px;
     letter-spacing: 0.23em;
+    bottom: 50px;
   }
 
   .production-footer {
@@ -138,6 +141,7 @@ html, body {
     line-height: 24.78px;
     letter-spacing: 0.23em;
     white-space: nowrap;
+    bottom: 50px;
   }
 }
 

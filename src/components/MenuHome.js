@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './../styles/MenuHome.scss';
 import { NavLink } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../locales/i18n';
 
 function MenuHome() {
+  const [menuHeight, setMenuHeight] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const currentLanguage = i18n.language;
 
@@ -18,6 +19,28 @@ function MenuHome() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Расчет расстояния между ссылками на основе высоты окна
+  useEffect(() => {
+    const updateMenuHeight = () => {
+      const viewportHeight = window.innerHeight;
+      const calculatedGap = Math.max(20, viewportHeight * 0.02); // Минимальный gap 20px или 2% от высоты
+      const topOffset = viewportHeight * 0.15; // Отступ сверху (15%)
+      const bottomOffset = viewportHeight * 0.1; // Отступ снизу (10%)
+
+      // Обновление CSS custom properties
+      document.documentElement.style.setProperty('--menu-gap', `${calculatedGap}px`);
+      document.documentElement.style.setProperty('--menu-top-offset', `${topOffset}px`);
+      document.documentElement.style.setProperty('--menu-bottom-offset', `${bottomOffset}px`);
+
+      setMenuHeight(viewportHeight - topOffset - bottomOffset);
+    };
+
+    updateMenuHeight();
+    window.addEventListener('resize', updateMenuHeight);
+
+    return () => window.removeEventListener('resize', updateMenuHeight);
+  }, []);
 
   return (
     <header className="menuhome-header">
@@ -36,7 +59,7 @@ function MenuHome() {
       <LanguageSwitcher className='language-switcher-home'/>
 
       <nav className={`menu-home ${isMenuOpen ? 'open' : ''}`}>
-        <ul>
+        <ul style={{ height: `${menuHeight}px` }}>
           <li>
             <NavLink  to={getLocalizedPath('/about')} activeclassname="active-link">
               {t('menuHome.mission')}

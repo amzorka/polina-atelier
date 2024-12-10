@@ -221,7 +221,6 @@ const age = t(`productionScroll.age${index + 1}`);
 const post = t(`productionScroll.post${index + 1}`);
 const slogan = t(`productionScroll.slogan${index + 1}`);
 
-console.log(`Text for image ${index + 1}:`, { name, age, post, slogan });
 
 
   return (
@@ -232,7 +231,7 @@ console.log(`Text for image ${index + 1}:`, { name, age, post, slogan });
         age={age}
         post={post}
         slogan={slogan}
-        imageStyle={{ width: imageWidth }}
+        imageStyle={{ width: imageWidth, height: imageWidth * 1.5 }}
         
       />
     );

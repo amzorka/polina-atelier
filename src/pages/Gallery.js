@@ -472,6 +472,7 @@ import 'slick-carousel/slick/slick-theme.css';
           <MenuDark isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} isModalOpen={isModalOpen} />
         </div>
         <div className="gallery-container">
+          <div className='gallery-content'>
           {projects.map((project) => (
             <div
               key={project.index}
@@ -492,6 +493,7 @@ import 'slick-carousel/slick/slick-theme.css';
               />
             </div>
           ))}
+          </div>
         </div>
   
         {currentProject && (

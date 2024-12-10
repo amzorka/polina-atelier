@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/LensScroll.scss';
 
 import scroll1 from '../images/LensScroll/1.png';
@@ -143,6 +143,31 @@ const HoverImageLens = ({ imageSrc, text, imageStyle }) => {
 };
 
 function LensScroll() {
+
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const handleWheel = (event) => {
+      // Плавная прокрутка вручную
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop += event.deltaY;
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('wheel', handleWheel);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
+
+
+
   const [currentImages, setCurrentImages] = useState([]);
   const [imageWidth, setImageWidth] = useState(getDefaultImageWidth())
 
@@ -186,9 +211,9 @@ function LensScroll() {
 
 
   return (
-    <div className="image-scroll-lens">
+    <div className="image-scroll-lens" ref={scrollContainerRef}>
       {currentImages.map((imageSrc, index) => (
-        <HoverImageLens key={index} imageSrc={imageSrc} imageStyle={{width: imageWidth}} />
+        <HoverImageLens key={index} imageSrc={imageSrc} imageStyle={{width: imageWidth, height: imageWidth * 1.5}} />
       ))}
     </div>
   );

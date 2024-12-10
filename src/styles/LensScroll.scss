@@ -15,6 +15,7 @@
 
 .image-scroll-lens img {
   width: 262px;
+  max-height: 700px;
 }
 
 .image-scroll-lens {
@@ -24,13 +25,6 @@
 
   .image-scroll-lens::-webkit-scrollbar {
     display: none; 
-  }
-
-
-@media (min-width: 1280px) and (max-width: 1919px)  {
-
-  .image-scroll-lens {
-    height: 369px;
   }
 
   @media (max-width: 767px)   {
@@ -51,4 +45,4 @@
       width: 243px;
     }
   }
-}  
+

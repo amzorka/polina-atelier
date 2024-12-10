@@ -8,7 +8,7 @@
 
 .lens-page {
     width: 100%;
-    height: 200%;
+    height: 200dvh;
     display: flex;
     flex-direction: column;
     scroll-snap-type: y mandatory;
@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%; 
+  height: 100dvh; 
   width: 100vw;
   z-index: 1;
   overflow: hidden;
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100dvh;
     width: 100vw;
     background-size: contain;
     scroll-snap-align: start;
@@ -45,7 +45,7 @@
   .lens-footer {
     font-family: 'Kudryashev Headline Sans';
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 18px;
@@ -59,7 +59,7 @@
   }
 
   @media (max-width: 767px) {
-
+    
     .second-section-lens {
       background-image: url('../images/EducationBG2MPLE.png');
     }
@@ -72,12 +72,34 @@
       font-weight: 400;
       line-height: 21.24px;
       letter-spacing: 0.23em;
+      bottom: 50px;
     }
   }
 
  @media (min-width: 768px) and (max-width: 1279px) {
+
     .second-section-lens {
       background-image: url('../images/EducationBG2TPLE.jpg');
+  }
+
+  .lens-footer {   
+    font-family: 'Kudryashev Headline Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 185%;
+    letter-spacing: 19%;
+    bottom: 50px;
+  }
+ }
+
+ @media (min-width: 1280px) and (max-width: 1919px) {
+  .lens-footer {   
+    font-family: 'Kudryashev Headline Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 177%;
+    letter-spacing: 23%;
+    bottom: 50px;
   }
  }
 

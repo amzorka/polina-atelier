@@ -21,7 +21,14 @@ html, body {
   width: 100%;
 }
 
+.no-scroll-page {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+}
+
 .home {
+  overflow: hidden;
   height: 100%;
   width: 100vw;
   position: relative; 
@@ -45,6 +52,7 @@ html, body {
     height: 100%;
 
     .center-text img {
+      margin-top: calc(3vh);
       height: 30px;
       width: 296px;
       margin-bottom: 70px;

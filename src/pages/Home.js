@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HomeSlider from '../components/HomeSlider';
 import MenuHome from '../components/MenuHome'
 import './../styles/Home.scss';
+import IMAGES from '../imagesData'
 import mobileLogo from '../images/Logos/mobileLogo.png';
 import tabletLogo from '../images/Logos/tabletLogo.png';
 import laptopLogo from '../images/MenuLogos/laptopLightLogo.png';
@@ -43,6 +44,7 @@ function Home() {
       : desktopLogo;
 
   return (
+    <body className="no-scroll-page">
     <div className="home">
         <HomeSlider />   
       <div className="overlay">
@@ -54,6 +56,7 @@ function Home() {
       </main>
     </div>
   </div> 
+  </body>
   );
 }
 

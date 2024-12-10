@@ -106,10 +106,10 @@ function MenuDark({ isMenuOpen, toggleMenu, isModalOpen }) {
         </ul>
       </nav>
 
-      <div
+      {/* <div
         className={`menu-overlay ${isMenuOpen ? 'visible' : ''}`}
         onClick={toggleMenu}
-      />
+      /> */}
     </header>
   );
 }

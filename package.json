@@ -6,7 +6,8 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "framer-motion": "^11.11.9",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^11.13.1",
     "i18next": "^23.16.4",
     "node-sass": "^7.0.3",
     "react": "^18.3.1",
@@ -16,14 +17,16 @@
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
+    "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start npm run generate-images && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-images": "node generateImages.js"
   },
   "eslintConfig": {
     "extends": [
@@ -48,3 +51,5 @@
     "url-loader": "^4.1.1"
   }
 }
+
+
