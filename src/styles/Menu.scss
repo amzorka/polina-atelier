@@ -79,7 +79,7 @@
     }
   
     .active {
-      color: white !important; 
+      color: white; 
     }
 
     .inactive {
@@ -159,6 +159,12 @@
     visibility: visible; /* Убираем скрытие */
   }
 
+  @media (max-height: 780px) {
+    .menu ul li {
+      margin: 20px 0 !important;
+    }
+  }
+
   @media (max-width: 767px) {
 
     .menu-icon {
@@ -215,17 +221,18 @@
     }
     
     .menu a {
-      font-family: 'Kudryashev Headline Sans', sans;
       color: #8c8781 !important;
+      font-family: 'Kudryashev Headline Sans', sans;
       font-size: 10px;
       text-decoration: none;
     }
   
     .language-switcher a {
-      font-size: 11px !important;
+      font-size: 10px !important;
       font-weight: 400;
       line-height: 14.8px !important;
       letter-spacing: 0.19em !important;
+
     }
   
     .logo img {
@@ -238,10 +245,11 @@
 
     .language-switcher {
       z-index: 1000;
+
     }
   }
   
-  @media (min-width: 768px) and (max-width: 1279px) {
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
 
     .menu {
       position: fixed;
@@ -300,14 +308,10 @@
     
     .menu a {
       font-family: 'Kudryashev Headline Sans', sans;
-      color: #8c8781 !important;
+      color: #8c8781;
       font-size: 12px;
       text-decoration: none;
     }
-  
-    .menu.open .menu-icon .line {
-      background-color: #8c8781;
-    } 
     
     .logo img {
       width: 198px !important;
@@ -324,6 +328,55 @@
     }
   
   }
+
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+ 
+    .menu-icon {
+      width: 11px !important;
+      height: 9px !important;
+  
+      &.open .line:nth-child(1) {
+        transform: rotate(45deg) translate(1px, 1px) !important;
+      }
+  
+      &.open .line:nth-child(2) {
+        opacity: 0; 
+      }
+  
+      &.open .line:nth-child(3) {
+        transform: rotate(-45deg) translate(4.8px, -4.5px) !important;
+      }
+    }
+
+    .logo img {
+      width: 158px !important;
+      height: 16px !important;
+    }
+
+    .menu li a{
+      margin-bottom: 12px;
+      margin-top: 7px;
+      font-size: 10px;
+      line-height: 185%;
+      letter-spacing: 0.19em;
+    }
+
+    .menu ul {
+      margin-left: 10px;
+    }
+
+    .menu li a{
+      font-size: 10px;
+      line-height: 185%;
+      letter-spacing: 0.19em;
+    }
+
+    .language-switcher a {
+      font-size: 10px !important;
+    }
+  }
+
+
 
   @media (min-width: 1280px) and (max-width: 1919px) {
 
@@ -372,7 +425,7 @@
     }
   }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279px) and (orientation: portrait){
 
   .menu-header {
 

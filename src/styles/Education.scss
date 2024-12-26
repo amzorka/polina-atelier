@@ -156,7 +156,7 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
     .first-section {
       background-image: url('/images/EducationBG1T.png'); 
     }
@@ -196,6 +196,43 @@
     .bird-logo {
       width: 58px;
       height: 51px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+    .first-section {
+      background-image: url('/images/EducationBG1L.jpg'); 
+    }
+
+    .education-content {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 177%;
+      letter-spacing: 0.23em;
+      margin-bottom: 50px;
+    }
+
+    .justified {
+      width: 468px;
+      height: 75px;
+      font-size: 10px !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.19em !important;
+    }
+
+    .centroid {
+      width: 468px !important;
+    }
+
+    .centroid a {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.19em;
+    }
+
+    .bird-logo {
+      width: 39px !important;
+      height: 39px !important;
     }
   }
 

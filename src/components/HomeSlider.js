@@ -27,6 +27,7 @@ function HomeSlider() {
 
   useEffect(() => {
     const updateSlides = () => {
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
       const width = window.innerWidth;
 
       if (width <= 767) {
@@ -34,7 +35,13 @@ function HomeSlider() {
         setCurrentSlides([mSlide1, mSlide2, mSlide3]);
       } else if (width >= 768 && width <= 1279) {
         // Планшеты
-        setCurrentSlides([tSlide1, tSlide2, tSlide3]);
+        if (isLandscape) {
+          // Горизонтальная ориентация (показываем адаптив для ноутбука)
+          setCurrentSlides([lSlide1, lSlide2, lSlide3]);
+        } else {
+          // Вертикальная ориентация (планшетный адаптив)
+          setCurrentSlides([tSlide1, tSlide2, tSlide3]);
+        }
       } else if (width >= 1280 && width <= 1919) {
         // Ноутбуки
         setCurrentSlides([lSlide1, lSlide2, lSlide3]);

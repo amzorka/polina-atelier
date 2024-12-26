@@ -60,6 +60,30 @@ html, body {
   }
 }
 
+.orientation-warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-image: url('/images/EducationBG2AGP.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  color: #8c8781;
+  line-height: 185%;
+  letter-spacing: 19%;
+  font-family: 'Kudryashev Headline Sans';
+  font-size: 16px;
+  text-align: center;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @media (max-width: 767px) {
 
   .center-text img {
@@ -77,6 +101,20 @@ html, body {
   .home-main {
     padding: 0 20px;
     text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+  .center-text img {
+    width: 295px !important;
+    height: 29px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+  .center-text img {
+    width: 228px !important;
+    height: 23px !important;
   }
 }
 

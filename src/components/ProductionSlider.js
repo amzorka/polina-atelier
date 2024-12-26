@@ -52,19 +52,26 @@ function ProductionSlider() {
   useEffect(() => {
     const updateSlides = () => {
       const width = window.innerWidth;
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
 
       if (width <= 767) {
-        
+        // Мобильные устройства
         setCurrentSlides([mSlide1, mSlide2, mSlide3, mSlide4, mSlide5, mSlide6, mSlide7, mSlide8 ]);
       } else if (width >= 768 && width <= 1279) {
-        
-        setCurrentSlides([tSlide1, tSlide2, tSlide3, tSlide4, tSlide5, tSlide6, tSlide7, tSlide8 ]);
+        // Планшеты
+        if (isLandscape) {
+          // Горизонтальная ориентация (показываем адаптив для ноутбука)
+          setCurrentSlides([lSlide1, lSlide2, lSlide3, lSlide4, lSlide5, lSlide6, lSlide7, lSlide8]);
+        } else {
+          // Вертикальная ориентация (планшетный адаптив)
+          setCurrentSlides([tSlide1, tSlide2, tSlide3, tSlide4, tSlide5, tSlide6, tSlide7, tSlide8]);
+        }
       } else if (width >= 1280 && width <= 1919) {
-        
-        setCurrentSlides([lSlide1, lSlide2, lSlide3, lSlide4, lSlide5, lSlide6, lSlide7, lSlide8 ]);
+        // Ноутбуки
+        setCurrentSlides([lSlide1, lSlide2, lSlide3, lSlide4, lSlide5, lSlide6, lSlide7, lSlide8]);
       } else {
-        
-        setCurrentSlides([slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8 ]);
+        // Десктопы
+        setCurrentSlides([slide1, slide2, slide3]);
       }
     };
 

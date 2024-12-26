@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import '../styles/ProductionScroll.scss';
 import { useTranslation } from 'react-i18next';
 import scroll1 from '../images/ProductionScroll/1.png';
@@ -144,8 +144,14 @@ const getMaxFullVisibleImagesCount = () => {
     imagesCount++
   }
 
-  return imagesCount - 1
-}
+  // Для телефонов (ширина экрана <= 767px) возвращаем imagesCount - 1
+  if (screenWidth <= 767) {
+    return imagesCount - 1;
+  }
+
+  // Для всех остальных размеров экрана возвращаем imagesCount
+  return imagesCount;
+};
 
 const HoverImage = ({ imageSrc, name, age, post, slogan, imageStyle }) => {
 
@@ -163,6 +169,38 @@ const HoverImage = ({ imageSrc, name, age, post, slogan, imageStyle }) => {
 };
 
 const ProductionScroll = () => {
+
+
+  const scrollRef = useRef(null);
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  const handleMouseDown = (e) => {
+    isDragging = true;
+    startX = e.pageX - scrollRef.current.offsetLeft;
+    scrollLeft = scrollRef.current.scrollLeft;
+  };
+
+  const handleMouseLeave = () => {
+    isDragging = false;
+  };
+
+  const handleMouseUp = () => {
+    isDragging = false;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Ускорение скролла
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+
+
+
   const { t } = useTranslation();
   const [currentImages, setCurrentImages] = useState([]);
   const [imageWidth, setImageWidth] = useState(getDefaultImageWidth())
@@ -171,12 +209,20 @@ const ProductionScroll = () => {
   useEffect(() => {
     const updateImages = () => {
       const width = window.innerWidth;
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
 
       if (width <= 767) {
         setCurrentImages([mScroll1, mScroll2, mScroll3, mScroll4, mScroll5, mScroll6, mScroll7, mScroll8, mScroll9, mScroll10, mScroll11, mScroll12, mScroll13, mScroll14, mScroll15, mScroll16, mScroll17, mScroll18, mScroll19, mScroll20, mScroll21, mScroll22, mScroll23, mScroll24]);
-      } else if (width >= 768 && width <= 1280) {
-        setCurrentImages([tScroll1, tScroll2, tScroll3, tScroll4, tScroll5, tScroll6, tScroll7, tScroll8, tScroll9, tScroll10, tScroll11, tScroll12, tScroll13, tScroll14, tScroll15, tScroll16, tScroll17, tScroll18, tScroll19, tScroll20, tScroll21, tScroll22, tScroll23, tScroll24]);
-      } else if (width >= 1281 && width <= 1920) {
+      } else if (width >= 768 && width <= 1279) {
+        // Планшеты
+        if (isLandscape) {
+          // Горизонтальная ориентация (показываем адаптив для ноутбука)
+          setCurrentImages([lScroll1, lScroll2, lScroll3, lScroll4, lScroll5, lScroll6, lScroll7, lScroll8, lScroll9, lScroll10, lScroll11, lScroll12, lScroll13, lScroll14, lScroll15, lScroll16, lScroll17, lScroll18, lScroll19, lScroll20, lScroll21, lScroll22, lScroll23, lScroll24]);
+        } else {
+          // Вертикальная ориентация (планшетный адаптив)
+          setCurrentImages([tScroll1, tScroll2, tScroll3, tScroll4, tScroll5, tScroll6, tScroll7, tScroll8, tScroll9, tScroll10, tScroll11, tScroll12, tScroll13, tScroll14, tScroll15, tScroll16, tScroll17, tScroll18, tScroll19, tScroll20, tScroll21, tScroll22, tScroll23, tScroll24]);
+        }
+       } else if (width >= 1280 && width <= 1919) {
         setCurrentImages([lScroll1, lScroll2, lScroll3, lScroll4, lScroll5, lScroll6, lScroll7, lScroll8, lScroll9, lScroll10, lScroll11, lScroll12, lScroll13, lScroll14, lScroll15, lScroll16, lScroll17, lScroll18, lScroll19, lScroll20, lScroll21, lScroll22, lScroll23, lScroll24]);
       } else {
         setCurrentImages([scroll1, scroll2, scroll3, scroll4, scroll5, scroll5, scroll6, scroll7, scroll8, scroll9, scroll10, scroll11, scroll12, scroll13, scroll14, scroll15, scroll16, scroll17, scroll18, scroll19, scroll20, scroll21, scroll22, scroll23, scroll24]);
@@ -213,7 +259,15 @@ const ProductionScroll = () => {
   return (
 
 
-    <div className="image-scroll">
+    <div className="image-scroll"
+    
+    ref={scrollRef}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      
+      >
   {currentImages.map((imageSrc, index) => {
 
 const name = t(`productionScroll.name${index + 1}`);
@@ -237,39 +291,6 @@ const slogan = t(`productionScroll.slogan${index + 1}`);
     );
   })}
 </div>
-
-
-
-
-
-
-
-    // <div className="image-scroll">
-    //        <HoverImage imageSrc={mScroll1} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll2} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll3} name={t('productionScroll.name1')} age={t('productionScroll.age1')} post={t('productionScroll.post1')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll4} name={t('productionScroll.name2')} age={t('productionScroll.age2')} post={t('productionScroll.post2')} slogan={t('productionScroll.slogan2')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll5} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //       <HoverImage imageSrc={mScroll6} name={t('productionScroll.name3')} age={t('productionScroll.age3')} post={t('productionScroll.post3')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //       <HoverImage imageSrc={mScroll7} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll8} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll9} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll10} name={t('productionScroll.name4')} age={t('productionScroll.age4')} post={t('productionScroll.post4')} slogan={t('productionScroll.slogan4')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll11} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll12} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll13} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll14} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll15} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll16} name={t('productionScroll.name5')} age={t('productionScroll.age5')} post={t('productionScroll.post5')} slogan={t('productionScroll.slogan5')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll17} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll18} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll19} name={t('productionScroll.name6')} age={t('productionScroll.age6')} post={t('productionScroll.post6')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll20} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll21} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll22} name={t('productionScroll.name7')} age={t('productionScroll.age7')} post={t('productionScroll.post7')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll23} alt='scroll' style={{...imageStyle, backgroundSize: 'contain'}}/>
-    //        <HoverImage imageSrc={mScroll24} name={t('productionScroll.name8')} age={t('productionScroll.age8')} post={t('productionScroll.post8')} style={{...imageStyle, backgroundSize: 'contain'}}/>
-    // </div>
   )
 
 

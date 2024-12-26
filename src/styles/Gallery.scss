@@ -153,6 +153,7 @@ button:not(.modal-close-button) {
     letter-spacing: 0.19em;
     z-index: 100;
     margin-bottom: 50px;
+    pointer-events: all;
   }
 
   .gallery-footer::before {
@@ -166,6 +167,7 @@ button:not(.modal-close-button) {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    pointer-events: none;
     z-index: -1; /* Псевдоэлемент будет находиться позади содержимого */
   }
   
@@ -178,6 +180,11 @@ button:not(.modal-close-button) {
 
   @media (max-width: 767px) {
 
+    .gallery-item img {
+      object-fit: cover;
+    }
+
+
     .gallery-footer {
       font-size: 14px;
       font-weight: 400;
@@ -187,7 +194,11 @@ button:not(.modal-close-button) {
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+
+    .gallery-item img {
+      object-fit: contain;
+    }
 
     .gallery-footer {
       font-size: 18px;
@@ -195,6 +206,21 @@ button:not(.modal-close-button) {
       line-height: 185%;
       letter-spacing: 19%;
       margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+
+    .gallery-footer {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 177%;
+      letter-spacing: 23%;
+      margin-bottom: 50px;
+    }
+
+    .gallery-item img {
+      object-fit: contain;
     }
  
   }

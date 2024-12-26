@@ -106,7 +106,7 @@
         }
       }
 
-      @media (min-width: 768px) and (max-width: 1279px) {
+      @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
 
         .about {
           background-image: url('../images/AboutBG.png');
@@ -129,6 +129,30 @@
 
         .about-footer a {
           font-size: 12px;
+        }
+      }
+
+            /* Планшет в горизонтальной ориентации (как ноутбук) */
+      @media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+        .about {
+          background-image: url('../images/AboutBG.png');
+          background-size: cover;
+        }
+
+        .about-content {
+          width: 468px;
+          height: 88px;
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 19%;
+        }
+
+        .about-footer {
+          margin-bottom: 50px;
+        }
+
+        .about-footer a {
+          font-size: 10px;
         }
       }
 

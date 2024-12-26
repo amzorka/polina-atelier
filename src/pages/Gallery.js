@@ -294,8 +294,8 @@ import 'slick-carousel/slick/slick-theme.css';
       index: 0,
       title: "CHESS TABLE",
       description: "THIS CHESS SET WAS INSPIRED BY THE ABSTRACT SCULPTURES OF CONSTANTIN BRANCUSI.",
-      desktopImages: [ chessp, chess1, chess2, chess3, chess4], 
-      mobileImages: [mchessp, mchess1, mchess2, mchess3, mchess4],
+      desktopImages: [chessp, chess1, chess2, chess3, chess4], 
+      mobileImages: [mchessp, mchess1, chess2, chess3, mchess4],
       tabletImages: [ tabletChessp, tabletChess1, tabletChess2, tabletChess3, tabletChess4], 
       laptopImages: [laptopchessp, laptopchess1, laptopchess2, laptopchess3, laptopchess4],
     },
@@ -424,6 +424,24 @@ import 'slick-carousel/slick/slick-theme.css';
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState(null);
     const [deviceType, setDeviceType] = useState("desktop");
+    const [showOrientationMessage, setShowOrientationMessage] = useState(false);
+
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      // Проверяем, является ли устройство мобильным (ширина <= 767px)
+      if (window.innerWidth <= 1130) {
+        const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+        setShowOrientationMessage(isLandscape); // Показываем сообщение в горизонтальной ориентации
+      } else {
+        setShowOrientationMessage(false); // Скрываем сообщение для других устройств
+      }
+    };
+
+    handleOrientationChange(); // Проверяем ориентацию при загрузке страницы
+    window.addEventListener('resize', handleOrientationChange); // Обработчик на изменение ориентации
+
+    return () => window.removeEventListener('resize', handleOrientationChange); // Удаляем обработчик при размонтировании
+  }, []);
   
     useEffect(() => {
       const handleResize = () => {
@@ -458,6 +476,12 @@ import 'slick-carousel/slick/slick-theme.css';
     };
   
     return (
+      <div>
+      {showOrientationMessage ? (
+        <div className="orientation-warning">
+          {t('orientationWarning')}
+        </div>
+      ) : (
       <div className="gallery-page">
         <button
           className={`modal-close-button ${isModalOpen ? 'open' : ''}`}
@@ -510,6 +534,8 @@ import 'slick-carousel/slick/slick-theme.css';
         <footer className="gallery-footer">
           <p>{t("gallery.footer")}</p>
         </footer>
+      </div>
+      )}
       </div>
     );
   };

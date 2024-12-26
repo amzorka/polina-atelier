@@ -93,7 +93,7 @@ const GAP_SIZE = 15
 const getDefaultImageWidth = () => {
 	const width = window.innerWidth
 
-	if (width <= 768) {
+	if (width <= 767) {
 		return 173
 	}
 
@@ -129,8 +129,14 @@ const getMaxFullVisibleImagesCount = () => {
     imagesCount++
   }
 
-  return imagesCount - 1
-}
+  // Для телефонов (ширина экрана <= 767px) возвращаем imagesCount - 1
+  if (screenWidth <= 767) {
+    return imagesCount - 1;
+  }
+
+  // Для всех остальных размеров экрана возвращаем imagesCount
+  return imagesCount;
+};
 
 
 const HoverImageLens = ({ imageSrc, text, imageStyle }) => {
@@ -174,12 +180,20 @@ function LensScroll() {
   useEffect(() => {
     const updateImages = () => {
       const width = window.innerWidth;
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
 
       if (width <= 767) {
         setCurrentImages([mScroll1, mScroll2, mScroll3, mScroll4, mScroll5, mScroll6, mScroll7, mScroll8, mScroll9, mScroll10, mScroll11, mScroll12, mScroll13, mScroll14, mScroll15, mScroll16, mScroll17, mScroll18, mScroll19, mScroll20]);
-      } else if (width >= 768 && width <= 1280) {
-        setCurrentImages([tScroll1, tScroll2, tScroll3, tScroll4, tScroll5, tScroll6, tScroll7, tScroll8, tScroll9, tScroll10, tScroll11, tScroll12, tScroll13, tScroll14, tScroll15, tScroll16, tScroll17, tScroll18, tScroll19, tScroll20]);
-      } else if (width >= 1281 && width <= 1920) {
+      } else if (width >= 768 && width <= 1279) {
+        // Планшеты
+        if (isLandscape) {
+          // Горизонтальная ориентация (показываем адаптив для ноутбука)
+          setCurrentImages([lScroll1, lScroll2, lScroll3, lScroll4, lScroll5, lScroll6, lScroll7, lScroll8, lScroll9, lScroll10, lScroll11, lScroll12, lScroll13, lScroll14, lScroll15, lScroll16, lScroll17, lScroll18, lScroll19, lScroll20]);
+        } else {
+          // Вертикальная ориентация (планшетный адаптив)
+          setCurrentImages([tScroll1, tScroll2, tScroll3, tScroll4, tScroll5, tScroll6, tScroll7, tScroll8, tScroll9, tScroll10, tScroll11, tScroll12, tScroll13, tScroll14, tScroll15, tScroll16, tScroll17, tScroll18, tScroll19, tScroll20]);
+        }
+       } else if (width >= 1280 && width <= 1919) {
         setCurrentImages([lScroll1, lScroll2, lScroll3, lScroll4, lScroll5, lScroll6, lScroll7, lScroll8, lScroll9, lScroll10, lScroll11, lScroll12, lScroll13, lScroll14, lScroll15, lScroll16, lScroll17, lScroll18, lScroll19, lScroll20]);
       } else {
         setCurrentImages([scroll1, scroll2, scroll3, scroll4, scroll5, scroll5, scroll6, scroll7, scroll8, scroll9, scroll10, scroll11, scroll12, scroll13, scroll14, scroll15, scroll16, scroll17, scroll18, scroll19, scroll20]);

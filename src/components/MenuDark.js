@@ -14,13 +14,17 @@ function MenuDark({ isMenuOpen, toggleMenu, isModalOpen }) {
   const [deviceType, setDeviceType] = useState('desktop');
 
   useEffect(() => {
+    const isLandscape = window.matchMedia('(orientation: landscape)').matches;
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width <= 768) {
+      if (width <= 767) {
         setDeviceType('mobile');
-      } else if (width <= 1279) {
+      } else if (width >= 768 && width <= 1279) {
+      if (isLandscape) {
+        setDeviceType('laptop');
+        } else
         setDeviceType('tablet');
-      } else if (width <= 1919) {
+      } else if (width >= 1280 && width <= 1919) {
         setDeviceType('laptop');
       } else {
         setDeviceType('desktop');

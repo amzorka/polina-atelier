@@ -11,19 +11,21 @@ import i18n from '../locales/i18n';
 
 function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
   const currentLanguage = i18n.language;
   const [deviceType, setDeviceType] = useState('desktop');
-
+  
   useEffect(() => {
+    const isLandscape = window.matchMedia('(orientation: landscape)').matches;
     const handleResize = () => {
       const width = window.innerWidth;
-      setIsMobileOrTablet(width <= 1279);
-      if (width <= 768) {
+      if (width <= 767) {
         setDeviceType('mobile');
-      } else if (width <= 1279) {
+      } else if (width >= 768 && width <= 1279) {
+      if (isLandscape) {
+        setDeviceType('laptop');
+        } else
         setDeviceType('tablet');
-      } else if (width <= 1919) {
+      } else if (width >= 1280 && width <= 1919) {
         setDeviceType('laptop');
       } else {
         setDeviceType('desktop');
@@ -65,7 +67,7 @@ function Menu() {
   return (
     <header
       className={`menu-header ${
-        isMenuOpen && isMobileOrTablet ? 'dark-menu' : ''
+        isMenuOpen ? 'dark-menu' : ''
       }`}
     >
       <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
