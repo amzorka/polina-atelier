@@ -295,7 +295,7 @@ import 'slick-carousel/slick/slick-theme.css';
       title: "CHESS TABLE",
       description: "THIS CHESS SET WAS INSPIRED BY THE ABSTRACT SCULPTURES OF CONSTANTIN BRANCUSI.",
       desktopImages: [chessp, chess1, chess2, chess3, chess4], 
-      mobileImages: [mchessp, mchess1, chess2, chess3, mchess4],
+      mobileImages: [mchessp, mchess1, mchess2, mchess3, mchess4],
       tabletImages: [ tabletChessp, tabletChess1, tabletChess2, tabletChess3, tabletChess4], 
       laptopImages: [laptopchessp, laptopchess1, laptopchess2, laptopchess3, laptopchess4],
     },

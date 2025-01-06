@@ -63,7 +63,7 @@ function LensSlider() {
         setCurrentSlides([lSlide1, lSlide2, lSlide3, lSlide4, lSlide5, lSlide6, lSlide7, lSlide8]);
       } else {
         // Десктопы
-        setCurrentSlides([slide1, slide2, slide3]);
+        setCurrentSlides([slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8]);
       }
     };
 
