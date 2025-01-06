@@ -68,7 +68,7 @@ function Home() {
       const {t} = useTranslation();      
 
   return (
-    <body className="no-scroll-page">
+    <div>
             {showOrientationMessage ? (
         <div className="orientation-warning">
           {t('orientationWarning')}
@@ -86,7 +86,7 @@ function Home() {
     </div>
   </div> 
       )}
-  </body>
+  </div>
   );
 }
 
