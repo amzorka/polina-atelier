@@ -233,7 +233,11 @@ function App() {
     <Router>
       <AnimatedRoutes />
     </Router>
+
+    
   );
+
+  
 }
 
 export default App;

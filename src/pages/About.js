@@ -1,9 +1,7 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useTranslation} from 'react-i18next';
-import './../styles/About.scss';
-import MenuDark from '../components/MenuDark';
-
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import "./../styles/About.scss";
+import MenuDark from "../components/MenuDark";
 
 function About() {
   const { t } = useTranslation();
@@ -16,27 +14,29 @@ function About() {
 
   useEffect(() => {
     const handleOrientationChange = () => {
-      // Проверяем, является ли устройство мобильным (ширина <= 767px)
+      if (typeof window.matchMedia !== "function") {
+        console.warn("matchMedia не поддерживается.");
+        return;
+      }
+
       if (window.innerWidth <= 1130) {
-        const isLandscape = window.matchMedia('(orientation: landscape)').matches;
-        setShowOrientationMessage(isLandscape); // Показываем сообщение в горизонтальной ориентации
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+        setShowOrientationMessage(isLandscape);
       } else {
-        setShowOrientationMessage(false); // Скрываем сообщение для других устройств
+        setShowOrientationMessage(false);
       }
     };
 
     handleOrientationChange(); // Проверяем ориентацию при загрузке страницы
-    window.addEventListener('resize', handleOrientationChange); // Обработчик на изменение ориентации
+    window.addEventListener("resize", handleOrientationChange); // Обработчик на изменение ориентации
 
-    return () => window.removeEventListener('resize', handleOrientationChange); // Удаляем обработчик при размонтировании
+    return () => window.removeEventListener("resize", handleOrientationChange);
   }, []);
 
   return (
-        <div>
+    <div>
       {showOrientationMessage ? (
-        <div className="orientation-warning">
-          {t('orientationWarning')}
-        </div>
+        <div className="orientation-warning">{t("orientationWarning")}</div>
       ) : (
         <div className="about">
           <MenuDark

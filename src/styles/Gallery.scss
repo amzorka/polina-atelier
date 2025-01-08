@@ -180,6 +180,10 @@ button:not(.modal-close-button) {
 
   @media (max-width: 767px) {
 
+    .gallery-container {
+      background-image: url('/images/AboutBGM.png');
+    }
+
     .gallery-item img {
       object-fit: cover;
     }
@@ -195,6 +199,10 @@ button:not(.modal-close-button) {
   }
 
   @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
+
+    .gallery-container {
+      background-image: url('/images/AboutBGT.jpg');
+    }
 
     .gallery-item img {
       object-fit: contain;
