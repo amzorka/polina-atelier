@@ -47,7 +47,7 @@ function Lens() {
     <div>
       {showOrientationMessage ? (
         <div className="orientation-warning">
-          {t('orientationWarning')}
+         <p>{t("orientationWarning")}</p>
         </div>
       ) : (
     <div className="lens-page">

@@ -19,8 +19,9 @@
 
     .contacts-link {
       position: absolute;
-      top: 40px;
-      left: 40px;
+      top: 42px;
+      left: 50px;
+      height: 10px;
   
       a {
         font-family: 'Kudryashev Headline Sans';
@@ -39,17 +40,17 @@
     }
   
     /* Иконка меню-бургера */
-    .menu-icon-home {
+    .menu-icon {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, -50%);
-      top: 51px;
+      transform: translateX(-50%);
+      top: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: 15.5px;
-      height: 12px;
+      width: 11px;
+      height: 9px;
       cursor: pointer;
       transition: all 0.3s ease-in-out; 
   
@@ -66,7 +67,7 @@
       }
   
       &.open .line:nth-child(1) {
-        transform: rotate(45deg) translate(4px, 4px);
+        transform: rotate(45deg) translate(1px, 1px);
       }
   
       &.open .line:nth-child(2) {
@@ -74,7 +75,7 @@
       }
   
       &.open .line:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -4px);
+        transform: rotate(-45deg) translate(4.8px, -4.5px);
       }
     }
     
@@ -82,8 +83,9 @@
       display: flex;
       align-items: center;
       position: absolute;
-      top: 40px;
-      right: 40px;
+      top: 50px;
+      right: 50px;
+      height: 10px;
 
       a {
         margin: 0 5px;
@@ -106,7 +108,7 @@
     
       span {
         color: white;
-        font-size: 14px;
+        font-size: 12px;
       }
      }
   }
@@ -174,31 +176,11 @@
       gap: 3px; /* Расстояние между ссылками */
     }
 
-    .menu-icon {
-      width: 10px !important;
-      height: 9px !important;
-      top: 43px !important;
-  
-      &.open .line:nth-child(1) {
-        transform: rotate(45deg) translate(1px, 1px) !important;
-      }
-  
-      &.open .line:nth-child(2) {
-        opacity: 0; 
-      }
-  
-      &.open .line:nth-child(3) {
-        transform: rotate(-45deg) translate(4.8px, -4.5px) !important;
-      }
-    }
-
-
     .language-switcher {
       font-size: 10px !important;
       font-weight: 400;
       line-height: 185% !important;
       letter-spacing: 0.19em !important;
-      top: 45px !important;
     }
 
     .contacts-link a {

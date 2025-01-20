@@ -40,13 +40,13 @@ button:not(.modal-close-button) {
 
 .modal-close-button {
   position: fixed !important;
-  top: 40px;
-  left: 40px;
+  top: 50px;
+  left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 20px; /* Установить ширину кнопки */
-  height: 15px; /* Установить высоту кнопки */
+  width: 11px; /* Установить ширину кнопки */
+  height: 9px; /* Установить высоту кнопки */
   cursor: pointer;
   z-index: 100001;
   background: none;
@@ -68,7 +68,7 @@ button:not(.modal-close-button) {
 }
 
 .modal-close-button.open .line-close:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(1px, 1px);
 }
 
 .modal-close-button.open .line-close:nth-child(2) {
@@ -76,19 +76,19 @@ button:not(.modal-close-button) {
 }
 
 .modal-close-button.open .line-close:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(4.8px, -4.5px);
 }
 
   
   
   .gallery-container {
-    background-image: url('/images/AboutBG.png'); 
+    background-image: url('../images/AboutBG.png'); 
+    background-size: contain;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; 
     background-position: center; 
     overflow: hidden;
     z-index: 1;
@@ -152,7 +152,7 @@ button:not(.modal-close-button) {
     line-height: 185%;
     letter-spacing: 0.19em;
     z-index: 100;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     pointer-events: all;
   }
 
@@ -185,7 +185,7 @@ button:not(.modal-close-button) {
     }
 
     .gallery-item img {
-      object-fit: cover;
+      object-fit: contain;
     }
 
 
@@ -194,7 +194,7 @@ button:not(.modal-close-button) {
       font-weight: 400;
       line-height: 177%;
       letter-spacing: 0.23em;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
   }
 
@@ -213,7 +213,7 @@ button:not(.modal-close-button) {
       font-weight: 400;
       line-height: 185%;
       letter-spacing: 19%;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
   }
 
@@ -224,7 +224,7 @@ button:not(.modal-close-button) {
       font-weight: 400;
       line-height: 177%;
       letter-spacing: 23%;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
     .gallery-item img {
@@ -240,7 +240,7 @@ button:not(.modal-close-button) {
       font-weight: 400;
       line-height: 177%;
       letter-spacing: 23%;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
  
   }

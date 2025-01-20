@@ -76,13 +76,19 @@ html, body {
   line-height: 185%;
   letter-spacing: 19%;
   font-family: 'Kudryashev Headline Sans';
-  font-size: 16px;
+  font-size: 10px;
   text-align: center;
   z-index: 9999;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.orientation-warning p {
+  width: 350px;
+  text-align: justify;
+  text-align-last: justify;
+  }
 
 @media (max-width: 767px) {
 

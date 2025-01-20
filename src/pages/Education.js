@@ -29,7 +29,7 @@ function Education() {
     <div>
       {showOrientationMessage ? (
         <div className="orientation-warning">
-          {t('orientationWarning')}
+         <p>{t("orientationWarning")}</p>
         </div>
       ) : (
     <div className="education">
@@ -45,10 +45,9 @@ function Education() {
           <p className="justified">
             {t('education.text1')}
           </p>
-          <p className="centroid">
-            <a href='mailto:info@polina-atelier.com?subject=question'>{t('education.email')}</a>
-          </p>
+
         </div>
+            <a className="centroid" href='mailto:info@polina-atelier.com?subject=question'>{t('education.email')}</a>
         <div className="bird-logo-container">
           <img src={require('../images/birdLogo.png')} alt="Bird Logo" className="bird-logo" />
         </div>

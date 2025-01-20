@@ -479,7 +479,7 @@ import 'slick-carousel/slick/slick-theme.css';
       <div>
       {showOrientationMessage ? (
         <div className="orientation-warning">
-          {t('orientationWarning')}
+          <p>{t("orientationWarning")}</p>
         </div>
       ) : (
       <div className="gallery-page">

@@ -36,7 +36,7 @@ function About() {
   return (
     <div>
       {showOrientationMessage ? (
-        <div className="orientation-warning">{t("orientationWarning")}</div>
+        <div className="orientation-warning"><p>{t("orientationWarning")}</p></div>
       ) : (
         <div className="about">
           <MenuDark

@@ -50,7 +50,7 @@ function MenuHome() {
         </NavLink>
       </div>
 
-      <div className={`menu-icon-home ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+      <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>

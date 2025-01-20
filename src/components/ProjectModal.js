@@ -60,10 +60,6 @@ function ProjectModal({
     >
       {project && (
         <div className="modal-content">
-          <h2 className="project-title">
-            {t(`gallery.projects.${project.index}.title`)}
-          </h2>
-
           {/* Слайдер */}
           <div className="pr-slider-container">
             <Slider {...sliderSettings}>
@@ -81,11 +77,6 @@ function ProjectModal({
                 ))}
             </Slider>
           </div>
-
-          {/* Описание проекта */}
-          <p className="project-description">
-            {t(`gallery.projects.${project.index}.description`)}
-          </p>
         </div>
       )}
     </Modal>

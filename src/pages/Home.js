@@ -71,7 +71,7 @@ function Home() {
     <div>
             {showOrientationMessage ? (
         <div className="orientation-warning">
-          {t('orientationWarning')}
+        <p>{t("orientationWarning")}</p>
         </div>
       ) : (
     <div className="home">
