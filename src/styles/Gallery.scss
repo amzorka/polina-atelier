@@ -116,7 +116,7 @@ button:not(.modal-close-button) {
     font-family: 'Kudryashev Headline Sans';
     flex: 0 0 auto; /* Позволяет элементам не сжиматься */
     width: auto; /* Ширина изображения будет определяться автоматически */
-    max-width: calc(50vh * 1.5); /* Максимальная ширина с сохранением пропорций */
+    max-width: calc(23.3vh * 1.5); /* Максимальная ширина с сохранением пропорций */
     height: calc(50vh - 7.5px); 
     overflow: hidden;
     display: flex;
