@@ -129,8 +129,8 @@
     display: block;
     margin: 0 auto;
     object-fit: cover;
-    transform: scale(0.93); 
-    transform-origin: center; 
+    transform: scale(0.94);
+    transform-origin: center;
   }
   
   .project-description {
@@ -170,6 +170,8 @@
       max-width: 100%; 
       object-fit: contain; 
       object-position: center; 
+      transform: scale(1.03);
+      transform-origin: center;
     }
 
     .project-title {

@@ -71,8 +71,6 @@
   .centroid {
     font-family: 'Kudryashev Headline Sans';
     width: 526px;
-    margin: 0 auto;
-    padding-top: 10px;
     text-align: center;
     font-size: 12px;
     font-weight: 400;
@@ -80,6 +78,10 @@
     letter-spacing: 0.19em;
     color: #767676;
     text-decoration: none;
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    transform: translateX(-50%);
 
     a {
       text-decoration: none;
@@ -135,6 +137,7 @@
 
     .centroid {
       width: 289px !important;
+      font-size: 10px;
     }
 
     .centroid a {
@@ -244,6 +247,7 @@
 
     .centroid {
       width: 468px !important;
+      font-size: 10px;
     }
 
     .centroid a {
