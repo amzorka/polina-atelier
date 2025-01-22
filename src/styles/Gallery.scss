@@ -68,7 +68,7 @@ button:not(.modal-close-button) {
 }
 
 .modal-close-button.open .line-close:nth-child(1) {
-  transform: rotate(45deg) translate(1px, 1px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 
 .modal-close-button.open .line-close:nth-child(2) {
@@ -76,7 +76,7 @@ button:not(.modal-close-button) {
 }
 
 .modal-close-button.open .line-close:nth-child(3) {
-  transform: rotate(-45deg) translate(4.8px, -4.5px);
+  transform: rotate(-45deg) translate(2.7px, -2.7px);
 }
 
   

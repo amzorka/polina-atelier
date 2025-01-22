@@ -32,7 +32,7 @@
       }
   
       &.open .line-dark:nth-child(1) {
-        transform: rotate(45deg) translate(1px, 1px);
+        transform: rotate(45deg) translate(3px, 3px);
       }
   
       &.open .line-dark:nth-child(2) {
@@ -40,7 +40,7 @@
       }
   
       &.open .line-dark:nth-child(3) {
-        transform: rotate(-45deg) translate(4.8px, -4.5px);
+        transform: rotate(-45deg) translate(2.7px, -2.7px);
       }
     }
   
