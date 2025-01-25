@@ -41,6 +41,10 @@
   
   
   .ecology-footer {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -50,7 +54,6 @@
     -webkit-text-stroke: 0.1px #ffffff;
     -webkit-text-fill-color: #ffffff;
     font-family: 'Kudryashev Headline Sans';
-    margin-bottom: 45px;
   }
 
   @media (max-width: 567px) {

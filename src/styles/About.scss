@@ -38,10 +38,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    word-break: keep-all;
   };
   
     .about-footer {
+        position: absolute;
+        left: 50%;
+        bottom: 45px;
+        transform: translateX(-50%);
         font-family: 'Kudryashev Headline Sans';
         text-align: center;
         font-size: 12px;
@@ -51,7 +54,6 @@
         -webkit-text-stroke: 0.1 #767676;
         -webkit-text-fill-color: #8C8781;
         letter-spacing: 0.19em;
-        margin-bottom: 45px;
       
         p {
           margin: 0;

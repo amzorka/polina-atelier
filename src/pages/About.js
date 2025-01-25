@@ -45,7 +45,7 @@ function About() {
             isModalOpen={isModalOpen}
           />
           <main className="about-content">
-            <p>{t("about.content")}</p>
+            {t("about.content")}
           </main>
           <footer className="about-footer">
             <p>
