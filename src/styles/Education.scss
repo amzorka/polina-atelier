@@ -108,7 +108,7 @@
   @media (max-width: 567px) {
     .justified {
     width: calc(100% - 100px) !important;
-    height: 99px;
+    // height: 99px;
     }
   }
 
@@ -138,6 +138,7 @@
     .centroid {
       width: 289px !important;
       font-size: 10px;
+      bottom: 180px;
     }
 
     .centroid a {
