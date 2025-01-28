@@ -98,7 +98,7 @@
     top: 0;
     left: -370px; 
     width: 300px; 
-    height: 102.5%; 
+    height: calc(100% + 50px); 
     background-color: transparent; 
     display: flex;
     justify-content: center;
@@ -298,16 +298,16 @@
       height: 16px !important;
     }
 
-    .menu {
-      height: 107%;
-    }
-
     .menu li a{
-      margin-bottom: 24px !important;
-      margin-top: -12px !important;
       font-size: 10px;
       line-height: 185%;
       letter-spacing: 0.19em;
+    }
+
+    .menu li {
+      height: 24px;
+      margin-bottom: 24px !important;
+      margin-top: -12px !important;
     }
 
     .menu ul {
@@ -328,10 +328,6 @@
 
 
   @media (min-width: 1280px) and (max-width: 1919px) {
-
-    .menu {
-      height: 106%;
-    }
 
     .logo img {
       width: 158px !important;
